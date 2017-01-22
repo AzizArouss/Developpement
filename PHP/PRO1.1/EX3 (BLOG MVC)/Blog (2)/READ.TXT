@@ -1,0 +1,34 @@
+MVC BLOG
+
+Controleur
+	> Acceuil.php
+	+ Admin.php
+
+Modèle
+	> Acceuil.php
+	+ Admin.php
+
+Vue
+	> Acceuil.phtml
+	+ Admin.phtml
+
+-----------------------------------------
+index.php
+-----------------------------------------
+
+switch ($_GET['page']){
+	-> $page
+}
+
+include_once 'controller/blog.php';
+
+-----------------------------------------
+controlleur/blog.php
+-----------------------------------------
+
+<?php
+
+include_once('model/'.$page.'.php');
+$template = $page;
+include_once('vue/layout.phtml');
+

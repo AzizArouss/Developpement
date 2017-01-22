@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>PHP</title>
+    <link rel="stylesheet" href="order-form.css">
+</head>
+<body>
+    <section>
+        <h1>Bons de commande</h1>
+        <a href="index.php">Retourner à l'accueil</a>
+        <article class="order-form-customer">
+            <h2><?=$infos_client["customerName"]?></h2>
+            <h3><?=$infos_client["contactFirstName"]?><?=$infos_client["contactLastName"]?></h3>
+            <p><?=$infos_client["addressLine1"]?></p>
+            <p><?=$infos_client["city"]?></p>
+        </article>
+        <hr>
+        <table class="standard-table">
+            <caption>Bon de commande n° <?php echo $orderNumber ?></caption>
+            <thead>
+                <tr>
+                    <th>Produit</th>
+                    <th class="money-column">Prix Unitaire</th>
+                    <th>Quantité</th>
+                    <th class="money-column">Prix Total</th>
+                </tr>
+            </thead>
+            <tfoot>
+                <?php foreach($infos_facture as $index => $ligne){ ?>
+                <tr>
+                    <th colspan="3">Montant Total HT</th>
+                    <th><?=number_format($ligne["TOTAL"],2)?> €</th>
+                </tr>
+                <tr>
+                    <th colspan="3">TVA (20 %)</th>
+                    <th><?=number_format($ligne["TVA"],2)?> €</th>
+                </tr>
+                <tr>
+                    <th colspan="3">Montant Total TTC</th>
+                    <th><?=number_format($ligne["TTC"],2)?> €</th>
+                </tr>
+                <?php } ?>
+            </tfoot>
+            <tbody>
+                <?php foreach($infos_commande as $index => $ligne){ ?>
+                    <tr>
+                        <td><?= $ligne["productName"]?></td>
+                        <td class="money-column"><?=number_format($ligne["priceEach"],2)?> €</td>
+                        <td><?= $ligne["quantityOrdered"]?></td>
+                        <td class="money-column"><?=number_format($ligne["prixTotal"],2)?> €</td>
+                    </tr>
+                <?php } ?>
+            </tbody>
+        </table>
+    </section>
+</body>
+</html>

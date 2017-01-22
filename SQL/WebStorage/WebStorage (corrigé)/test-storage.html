@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Webstorage</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans">
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- Librairie jQuery -->
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+    <!-- Fonctions du projet -->
+    <script src="js/storage.js"></script>
+    <script src="js/events.js"></script>
+</head>
+<body>
+    <header>
+        <h1><i class="fa fa-flask"></i> Exercice Storage</h1>
+    </header>
+    <section id="couleur_fond">
+        <fieldset>
+            <legend> Sauvegarde couleurs </legend>
+            <div id="change_couleur">
+                <label for="couleur">Couleur de fond</label>
+                <input id="couleur" type="text" placeholder="hexa: #0A2B4C" value="999999">
+            </div>
+            <div id="choix_duree">
+                <input id="local" type="radio" value="local" name="duree"><label for="local">Indeterminée (local) </label>
+                <input id="session" type="radio" value="session" name="duree" checked><label for="session">Déterminée (session) </label>
+            </div>
+           <button id="sauve_couleur">Sauvegarder</button>
+        </fieldset>
+    </section>
+    <section id="tableau">
+        <fieldset>
+            <legend> Sauvegarde données Json </legend>
+            <p>
+                <label>Mon nom</label>
+                <input type="text" id="nom" value="Mon nom 3">
+            </p>
+            <p>
+                <label>Mon prénom</label>
+                <input type="text" id="prenom" value="Mon prénom 3">
+            </p>
+            <button id="sauve_json">Json</button>
+            <button id="ajoute_json">Ajouter</button>
+        </fieldset>
+    </section>
+
+    <section id="liste_data">
+        <ul>
+            <li data-tab="1">Produit 1</li>
+            <li data-tab="2">Produit 2</li>
+            <li data-tab="3">Produit 3</li>
+        </ul>
+    </section>
+
+    <script src="js/main.js"></script>
+</body>

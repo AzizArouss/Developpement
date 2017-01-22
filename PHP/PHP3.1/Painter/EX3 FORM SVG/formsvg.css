@@ -1,0 +1,56 @@
+body {
+    font-family: 'Indie Flower', cursive;
+    margin: auto;
+    width: 800px;
+}
+
+#dessin {
+    width: 1000px;
+    height: 500px;
+    border : 1px solid orange;
+}
+ 
+#choix_fomulaire {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+#choix_fomulaire li{
+    width: 20%;
+    list-style: none;
+}
+
+#choix_fomulaire li label {
+    margin-left: 10px;
+}
+
+#choix_fomulaire li input {
+    position: relative;
+    top: 4px;
+}
+
+
+#formulaires h2 {
+    margin-top: 20px;
+    margin-bottom: 10px
+}
+
+#fomulaire label {
+    width: 140px;
+    display: inline-block;
+}
+
+#fomulaire input {
+    width: 40px;
+    display: inline-block;
+}
+
+#fomulaire input[type=submit] {
+    width: 100px;
+    display: inline-block;
+}
+
+#fomulaire {
+    margin: 20px 0 0 50px;
+}

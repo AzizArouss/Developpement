@@ -1,0 +1,870 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"for",
+				"foreach	foreach …"
+			],
+			[
+				"i",
+				"important"
+			],
+			[
+				"margin",
+				"margin-top"
+			],
+			[
+				"margi",
+				"margin-top"
+			],
+			[
+				"font",
+				"font-family"
+			],
+			[
+				"tex",
+				"text-decoration"
+			],
+			[
+				"els",
+				"else"
+			],
+			[
+				"margin-",
+				"margin-left"
+			],
+			[
+				"min",
+				"min-height"
+			],
+			[
+				"in",
+				"inline-block"
+			],
+			[
+				"inl",
+				"inline"
+			],
+			[
+				"text",
+				"text-transform"
+			],
+			[
+				"padd",
+				"padding-right"
+			],
+			[
+				"fon",
+				"font-weight"
+			],
+			[
+				"unset",
+				"unset"
+			],
+			[
+				"idA",
+				"idA"
+			],
+			[
+				"var",
+				"var_dump"
+			],
+			[
+				"taille",
+				"taille_L"
+			],
+			[
+				"paddi",
+				"padding-bottom"
+			],
+			[
+				"fo",
+				"foreach	foreach …"
+			],
+			[
+				"date_modi",
+				"date_modif"
+			],
+			[
+				"t",
+				"tbody	Tag"
+			],
+			[
+				"array",
+				"array"
+			],
+			[
+				"strto",
+				"strtolower"
+			],
+			[
+				"h",
+				"h5	Tag"
+			],
+			[
+				"ad",
+				"admin"
+			],
+			[
+				"include",
+				"include_once"
+			],
+			[
+				"heder",
+				"header"
+			],
+			[
+				"paddin",
+				"padding-left"
+			],
+			[
+				"table",
+				"tables"
+			],
+			[
+				"unse",
+				"unset"
+			],
+			[
+				"defin",
+				"defined"
+			],
+			[
+				"inlin",
+				"inline-block"
+			],
+			[
+				"op",
+				"option	Tag"
+			],
+			[
+				"se",
+				"section	Tag"
+			],
+			[
+				"marg",
+				"margin"
+			],
+			[
+				"json",
+				"json_encode"
+			],
+			[
+				"session_",
+				"session_start"
+			],
+			[
+				"padding",
+				"padding-top"
+			],
+			[
+				"la",
+				"label"
+			],
+			[
+				"Fie",
+				"fields"
+			],
+			[
+				"ses",
+				"session_start"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"e",
+				"event"
+			],
+			[
+				"backgroun",
+				"background-color"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "_depart/index.php",
+			"settings":
+			{
+				"buffer_size": 1108,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "_depart/library/Configuration.class.php",
+			"settings":
+			{
+				"buffer_size": 742,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "_depart/library/FrontController.class.php",
+			"settings":
+			{
+				"buffer_size": 5554,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "index.php",
+			"settings":
+			{
+				"buffer_size": 1107,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "library/FrontController.class.php",
+			"settings":
+			{
+				"buffer_size": 5465,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 267.0,
+		"selected_items":
+		[
+		],
+		"width": 575.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/franck/Dropbox/_web/3wa/PRO1.1 - Restaurant/application/www/LayoutView.phtml",
+		"/Users/franck/Dropbox/_web/3wa/PRO1.1 - Restaurant/application/classes/UserSession.class.php",
+		"/Users/franck/Dropbox/_web/3wa/PRO1.1 - Restaurant/application/models/UserModel.class.php",
+		"/Users/franck/Dropbox/_web/3wa/PRO1.1 - Restaurant/application/models/MealModel.class.php",
+		"/Users/franck/Dropbox/_web/3wa/PRO1.1 - Restaurant/_depart/library/Http.class.php",
+		"/Users/franck/Dropbox/_web/3wa/PRO1.1 - Restaurant/_depart/library/FrontController.class.php",
+		"/Users/franck/Dropbox/_web/3wa/PRO1.1 - Restaurant/_depart/application/www/TestPage/TestpageView.phtml",
+		"/Users/franck/Dropbox/_web/3wa/PRO1.1 - Restaurant/_depart/application/controllers/TestPage/TestpageController.class.php",
+		"/Users/franck/Dropbox/_web/3wa/PRO1.1 - Restaurant/application/controllers/user/UserController.class.php",
+		"/Users/franck/Dropbox/_web/3wa/PRO1.1 - Restaurant/library/Database.class.php",
+		"/Users/franck/Dropbox/_web/3wa/PRO1.1 - Restaurant/application/controllers/meal/MealController.class.php",
+		"/Users/franck/Dropbox/_web/3wa/PRO1.1 - Restaurant/application/controllers/HomeController.class.php",
+		"/Users/franck/Dropbox/_web/3wa/PRO1.1 - Restaurant/application/controllers/user/login/LoginController.class.php",
+		"/Users/franck/Dropbox/_web/3wa/PRO1.1 - Restaurant/index.php",
+		"/Users/franck/Dropbox/_web/3wa/PRO1.1 - Restaurant/application/config/library.php",
+		"/Users/franck/Dropbox/_web/3wa/PRO1.1 - Restaurant/restoCorrige.sublime-project",
+		"/Users/franck/Dropbox/_web/3wa/PRO1.1 - Restaurant/_exercices/creation membres/model/new_account.model.php",
+		"/Users/franck/Dropbox/_web/3wa/PRO1.1 - Restaurant/_exercices/creation membres/vue/css/reset.css",
+		"/Users/franck/Dropbox/_web/3wa/PRO1.1 - Restaurant/application/controllers/user/logout/LogoutController.class.php",
+		"/Users/franck/Dropbox/_web/3wa/PRO1.1 - Restaurant/_depart/application/www/LayoutView.phtml",
+		"/Users/franck/Dropbox/_web/AfraVIH/single_pages/Adhesion.php",
+		"/Users/franck/Dropbox/_web/AfraVIH/single_pages/dashboard/index.php",
+		"/Users/franck/Dropbox/_web/AfraVIH/languages/fr_FR/LC_MESSAGES/messages.mo",
+		"/Users/franck/Dropbox/_web/Objectif50/Dani/js/gestion.js",
+		"/Users/franck/Dropbox/_web/Objectif50/Dani/index.html",
+		"/Users/franck/Dropbox/_web/exp_guidees/class/functions.php",
+		"/Users/franck/Dropbox/franck/Formation/exo_bootstrap/index.html",
+		"/Users/franck/Dropbox/_web/exp_guidees/index.php",
+		"/Users/franck/Dropbox/_web/exp_guidees/css/styles.css",
+		"/private/var/folders/j6/wv7npmz155gbjn_pkpf2jp3w0000gn/T/fz3temp-2/robots.txt",
+		"/private/var/folders/j6/wv7npmz155gbjn_pkpf2jp3w0000gn/T/fz3temp-2/index 2.php",
+		"/private/var/folders/j6/wv7npmz155gbjn_pkpf2jp3w0000gn/T/fz3temp-2/index_dezip.php",
+		"/private/var/folders/j6/wv7npmz155gbjn_pkpf2jp3w0000gn/T/fz3temp-2/.htaccess",
+		"/Users/franck/Dropbox/_web/3wa/SQL1.2/Bon de commande/index.phtml",
+		"/Users/franck/Dropbox/_web/3wa/SQL1.2/Bon de commande/index.php",
+		"/Users/franck/Dropbox/_web/3wa/SQL1.2/Bon de commande/Cours_SQL _1-2 Bon de commande.txt",
+		"/Users/franck/Dropbox/_web/3wa/SQL1.1/App-cours_SQL1_1.txt",
+		"/Users/franck/Dropbox/_web/3wa/SQL1.1/App-cours_SQL1_1-V2.txt",
+		"/Users/franck/Dropbox/_web/3wa/SQL1.2/Bon de commande/order-form.php",
+		"/Users/franck/Dropbox/_web/skappyDev/Skappy_02_dev_new/class/testDb.base.php",
+		"/Users/franck/Dropbox/_web/skappyDev/Skappy_02_dev_new/class/profil.class.php",
+		"/Users/franck/Dropbox/_web/skappyDev/Skappy_02_dev_new/class/connect.base.php",
+		"/Users/franck/Dropbox/_web/skappyDev/Skappy_02_dev_new/class/skavar.class.php",
+		"/Users/franck/Dropbox/_web/3wa/SQL1-1/SQL1.1 - Clause INNER JOIN (Jointures).sql",
+		"/Users/franck/Dropbox/_web/3wa/SQL1-1/SQL1.1 - Requêtes SELECT complexes.sql",
+		"/Users/franck/Dropbox/_web/3wa/SQL1-1/cours_SQL1_1.txt",
+		"/Users/franck/Dropbox/_web/3wa/SQL1-1/SQL1.1 - Base de Données ClassicModels.sql",
+		"/Users/franck/Dropbox/_web/3wa/TodoList/index.phtml",
+		"/Users/franck/Dropbox/_web/3wa/TodoList/index.php",
+		"/Users/franck/Dropbox/_web/3wa/TodoList/remove.php",
+		"/Users/franck/Dropbox/_web/3wa/TodoList/add.php",
+		"/Users/franck/Dropbox/_web/3wa/TodoList/utilities.php",
+		"/Users/franck/Dropbox/_web/3wa/tests/05-exercice-traducteur.phtml",
+		"/Users/franck/Dropbox/franck/Formation/3WA/dev/php/cours-PHP-2.md",
+		"/Users/franck/Dropbox/_web/3wa/tests/05-exercice-traducteur.php",
+		"/Users/franck/Dropbox/_web/3wa/tests/recup.php",
+		"/Users/franck/Downloads/PHP1.1 - 04 - Traducteur (corrigé)/05-exercice-traducteur.php",
+		"/Users/franck/Downloads/PHP1.1 - 04 - Traducteur (corrigé)/05-exercice-traducteur.phtml",
+		"/Users/franck/Dropbox/franck/cours-PHP-2.md",
+		"/Users/franck/Downloads/Gestion de la Souris/index.html",
+		"/Users/franck/Downloads/Gestion de la Souris/index.css",
+		"/Users/franck/Downloads/Gestion de la Souris/index.js",
+		"/Users/franck/Dropbox/_web/Objectif50/Dani-questionnaire/js/gestion.js",
+		"/Users/franck/Dropbox/_web/Objectif50/Dani-questionnaire/css/style_quest.css",
+		"/Users/franck/Dropbox/_web/Objectif50/Dani-questionnaire/html/q_fin.html",
+		"/Users/franck/Dropbox/_web/Objectif50/Dani-questionnaire/q_rendez_vous.html",
+		"/Users/franck/Dropbox/_web/Objectif50/Dani-questionnaire/html/q_budget.html",
+		"/Users/franck/Dropbox/_web/Objectif50/Dani-questionnaire/html/q_t_fond.html",
+		"/Users/franck/Dropbox/_web/Objectif50/Dani-questionnaire/html/q_interrogations.html",
+		"/Users/franck/Dropbox/_web/Objectif50/Dani-questionnaire/html/q_concurentiel.html",
+		"/Users/franck/Dropbox/_web/Objectif50/Dani-questionnaire/html/q_conquete.html",
+		"/Users/franck/Dropbox/_web/Objectif50/Dani-questionnaire/html/question_sante.html",
+		"/Users/franck/Dropbox/_web/Objectif50/Dani-questionnaire/html/q_objectifs.html",
+		"/Users/franck/Dropbox/_web/Objectif50/Dani-questionnaire/_BAK/index_entier.html",
+		"/Users/franck/Dropbox/franck/Formation/3WA/dev/Dragon slayer/Code source de départ/js/dragon-slayer.js",
+		"/Users/franck/Dropbox/franck/Formation/3WA/dev/Dragon slayer/Code source de départ/js/utilities.js",
+		"/Users/franck/Dropbox/franck/Formation/3WA/dev/Dragon slayer/Code source de départ/index.js",
+		"/Users/franck/Downloads/Dragon Slayer 2/js/utilities.js",
+		"/Users/franck/Downloads/Liste de Courses/index.js",
+		"/Users/franck/Downloads/Liste de Courses/README.md",
+		"/Users/franck/Downloads/Fonctions/exemple1.js",
+		"/Users/franck/Dropbox/_web/Objectif50/Dani-questionnaire/questionnaire.html",
+		"/Users/franck/Downloads/Opérateurs de Comparaison 2/exemple1.js",
+		"/Users/franck/Downloads/Structure de Contrôle IF/exemple1.js",
+		"/Users/franck/Downloads/Calculatrice de TVA avec remise/index.js",
+		"/Users/franck/Downloads/Calculatrice Numérique/index.js",
+		"/Users/franck/Downloads/Chifoumi/index.js",
+		"/Users/franck/Dropbox/_web/AfraVIH/single_pages/dashboard/class/functions.php",
+		"/Users/franck/Dropbox/_web/AfraVIH/css/adherent.css",
+		"/Users/franck/Dropbox/_web/AfraVIH/single_pages/dashboard/inc/adhesion_admin.inc.php",
+		"/Users/franck/Dropbox/_web/AfraVIH/single_pages/dashboard/inc/adhesion.inc.php",
+		"/Users/franck/Dropbox/_web/AfraVIH/css/adherent_admin.css",
+		"/Users/franck/Dropbox/_web/AfraVIH/single_pages/dashboard/adherents_admin.php",
+		"/private/var/folders/j6/wv7npmz155gbjn_pkpf2jp3w0000gn/T/fz3temp-2/adherents_admin.php",
+		"/Users/franck/Dropbox/_web/AfraVIH/single_pages/dashboard/php/config_mail.php",
+		"/Users/franck/Dropbox/_web/AfraVIH/single_pages/dashboard/php/adherent_include.php",
+		"/private/var/folders/j6/wv7npmz155gbjn_pkpf2jp3w0000gn/T/fz3temp-2/adherent_include.php",
+		"/private/var/folders/j6/wv7npmz155gbjn_pkpf2jp3w0000gn/T/fz3temp-2/adhesion_admin.inc.php",
+		"/private/var/folders/j6/wv7npmz155gbjn_pkpf2jp3w0000gn/T/fz3temp-2/config_mail.php",
+		"/Users/franck/Dropbox/_web/AfraVIH/single_pages/dashboard/php/adherent_mail.php",
+		"/Users/franck/Library/Containers/com.apple.mail/Data/Library/Mail Downloads/5FCE4804-C511-46E1-AB58-0E1A7AB24795/470000 AGGR.pdf",
+		"/private/var/folders/j6/wv7npmz155gbjn_pkpf2jp3w0000gn/T/fz3temp-1/Adhesion.php",
+		"/private/var/folders/j6/wv7npmz155gbjn_pkpf2jp3w0000gn/T/fz3temp-1/wp-config.php",
+		"/Users/franck/Dropbox/franck/Formation/IPSSI/IP_Formation/ftp/files/page_mini.html",
+		"/Users/franck/Dropbox/franck/Formation/IPSSI/IP_Formation/ftp/files/mon_animation.js",
+		"/private/var/folders/j6/wv7npmz155gbjn_pkpf2jp3w0000gn/T/fz3temp-1/node--blog.tpl 2.php",
+		"/private/var/folders/j6/wv7npmz155gbjn_pkpf2jp3w0000gn/T/fz3temp-1/global 2.css",
+		"/private/var/folders/j6/wv7npmz155gbjn_pkpf2jp3w0000gn/T/fz3temp-1/style 2.css",
+		"/private/var/folders/j6/wv7npmz155gbjn_pkpf2jp3w0000gn/T/fz3temp-1/global.css",
+		"/private/var/folders/j6/wv7npmz155gbjn_pkpf2jp3w0000gn/T/fz3temp-1/style.css",
+		"/private/var/folders/j6/wv7npmz155gbjn_pkpf2jp3w0000gn/T/fz3temp-1/fonctions.php",
+		"/private/var/folders/j6/wv7npmz155gbjn_pkpf2jp3w0000gn/T/fz3temp-1/params 5.php",
+		"/private/var/folders/j6/wv7npmz155gbjn_pkpf2jp3w0000gn/T/fz3temp-1/params 4.php",
+		"/private/var/folders/j6/wv7npmz155gbjn_pkpf2jp3w0000gn/T/fz3temp-1/params 3.php",
+		"/private/var/folders/j6/wv7npmz155gbjn_pkpf2jp3w0000gn/T/fz3temp-1/params 2.php",
+		"/private/var/folders/j6/wv7npmz155gbjn_pkpf2jp3w0000gn/T/fz3temp-1/params.php",
+		"/private/var/folders/j6/wv7npmz155gbjn_pkpf2jp3w0000gn/T/fz3temp-1/index.php",
+		"/private/var/folders/j6/wv7npmz155gbjn_pkpf2jp3w0000gn/T/fz3temp-1/index.html",
+		"/private/var/folders/j6/wv7npmz155gbjn_pkpf2jp3w0000gn/T/fz3temp-1/codes_acces.php",
+		"/private/var/folders/j6/wv7npmz155gbjn_pkpf2jp3w0000gn/T/fz3temp-1/configuration.php",
+		"/private/var/folders/j6/wv7npmz155gbjn_pkpf2jp3w0000gn/T/fz3temp-1/adherent_mail.php",
+		"/private/var/folders/j6/wv7npmz155gbjn_pkpf2jp3w0000gn/T/fz3temp-1/adhesion_admin.inc.php",
+		"/private/var/folders/j6/wv7npmz155gbjn_pkpf2jp3w0000gn/T/fz3temp-1/adhesion.inc.php",
+		"/private/var/folders/j6/wv7npmz155gbjn_pkpf2jp3w0000gn/T/fz3temp-1/adherents_admin.php",
+		"/private/var/folders/j6/wv7npmz155gbjn_pkpf2jp3w0000gn/T/fz3temp-1/functions.php",
+		"/private/var/folders/j6/wv7npmz155gbjn_pkpf2jp3w0000gn/T/fz3temp-1/.ovhconfig",
+		"/private/var/folders/j6/wv7npmz155gbjn_pkpf2jp3w0000gn/T/fz3temp-1/modif_produit.php",
+		"/private/var/folders/j6/wv7npmz155gbjn_pkpf2jp3w0000gn/T/fz3temp-1/responsive_produit.css"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			"/Users/franck/Dropbox/_web/RetraiteMars2015/bo,/Users/franck/Dropbox/_web/RetraiteMars2015/fo",
+			"/Users/franck/Dropbox/_web/RetraiteMars2015/bo"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"indice_en_variable",
+			"get_",
+			"->get_",
+			"post",
+			"setter_",
+			"$setter",
+			"setter",
+			"()",
+			";",
+			"return",
+			"get",
+			"text",
+			"svgContainer",
+			"draw",
+			"squa",
+			"results",
+			"shapes",
+			"draw",
+			"moveTo",
+			"run",
+			"isDrawing",
+			"getMouseLocation",
+			"onMouseDown",
+			"Program",
+			"createContact",
+			"loadAddressBook",
+			"loadDataFromDomStorage",
+			"loadAddressBook",
+			"q_fin",
+			"recup_index_tab_questions",
+			"distinct",
+			"between",
+			"bindParam",
+			"bindvalue",
+			"bindParam",
+			"bindparam",
+			"closeCursor",
+			"date",
+			"now",
+			"session",
+			"installe_clicks",
+			"prevent",
+			"valide_question",
+			"desactive_on",
+			"var l_tab",
+			"'click'",
+			"slice",
+			"question",
+			"[",
+			"margin",
+			"col-sm-12",
+			"(1",
+			"1",
+			"4",
+			"supprimer",
+			"suppri",
+			"ucwords",
+			"cursor",
+			"param_values",
+			"$adherents",
+			"adherents",
+			"include_once",
+			"bouton_envoi",
+			"erreur",
+			"ee",
+			"erreur_mail",
+			"envoi_mail",
+			"bouton_test",
+			"erreur_existe",
+			"$_POST",
+			"mails_destinataires",
+			"test",
+			"mailing",
+			"$mailing",
+			"$carte",
+			"$mail",
+			"mailing",
+			"message_info_compte_a_verifier",
+			"$text_signature",
+			"envoyer",
+			"signature_message",
+			"text_signature",
+			"expe_message",
+			"ida",
+			"value",
+			"$adherents",
+			"adherents",
+			"$value",
+			"echo",
+			"bouton_envoi",
+			"exit",
+			"choix_signature",
+			"carte_pref_envoi",
+			"dossier_signature",
+			"single_pages/dashboard/images/signatures",
+			"bouton_sauve",
+			"Mail de test",
+			"choix_signature",
+			");\n",
+			"signature",
+			"insertion_infos_compte",
+			"block",
+			"insertion_carte",
+			"test_destinataires",
+			"nom",
+			"h2",
+			"compteur",
+			"mail_pref",
+			"expe_message",
+			"expediteur_message",
+			"choix_signature",
+			"mail_pref",
+			"radio_check_signature",
+			"choix_carte",
+			"dossier_signature",
+			"dossier_fond_de_carte",
+			"fonds_de_cartes",
+			"signature",
+			"nom_image",
+			"mails_destinataires",
+			"bouton_envoi",
+			"boutton_envoyer",
+			"bouton_test",
+			"carte_pref_envoi",
+			"bouton_test",
+			"test_destinataires_check",
+			"signature",
+			"fond_carte"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"col-sm-4",
+			"(5",
+			"5",
+			"bacground-color",
+			"fond",
+			"span",
+			"li",
+			"",
+			"php //echo",
+			"//echo",
+			"contact@",
+			".(1)",
+			"",
+			")",
+			"]",
+			"",
+			").(",
+			"chr(",
+			")+(",
+			"debut_asc+)",
+			"debut_asc=)",
+			"+2",
+			"idA",
+			"// var_dump",
+			"// echo",
+			"'",
+			"',",
+			"",
+			"$point_interrogation[]",
+			".\"'\"",
+			"\"'\".",
+			"`\";",
+			"= \"`",
+			"\"`",
+			"\"`\"",
+			"//",
+			"// echo",
+			"_FILES[",
+			"--",
+			";\n  -- ADD KEY",
+			"-- ADD KEY",
+			"",
+			"#timmer_defi #temps_du_defi",
+			"ajout_skaps(skaps, idudj);",
+			"defi_en_cours['d_illustration']",
+			"defi_en_cours['d_duree']",
+			"defi_en_cours['iddefis']",
+			"tra_defi_en_cours[0]",
+			"tra_theme[0]",
+			"$tra_theme[",
+			"self::",
+			"var_inter_avant",
+			"https://skappy.co/clients",
+			"padding-right:10px",
+			"<?php echo $pathWWW; ?>img/",
+			"<?php echo $pathWWW; ?>\n",
+			"<?php echo $pathWWW; ?>img/\n",
+			"<?php echo $pathWWW; ?>\n<?php echo $pathWWW; ?>\n<?php echo $pathWWW; ?>img/",
+			"idprat_users_duree",
+			"</div></div></div>\\n",
+			"path",
+			"pathHTML",
+			"<?php echo $path ?>",
+			"portable",
+			"// console",
+			"$path",
+			"data['photos'][j]",
+			"data['photos'][i]",
+			"//",
+			"//echo",
+			"//",
+			"//echo",
+			"//",
+			"//echo"
+		],
+		"reverse": false,
+		"show_context": false,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "_depart/index.php",
+					"settings":
+					{
+						"buffer_size": 1108,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1107,
+								1107
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 123.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 1,
+					"file": "_depart/library/Configuration.class.php",
+					"settings":
+					{
+						"buffer_size": 742,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								265,
+								265
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 4.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "_depart/library/FrontController.class.php",
+					"settings":
+					{
+						"buffer_size": 5554,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4390,
+								4390
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1925.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 3,
+					"file": "index.php",
+					"settings":
+					{
+						"buffer_size": 1107,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								870,
+								1016
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 107.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 4,
+					"file": "library/FrontController.class.php",
+					"settings":
+					{
+						"buffer_size": 5465,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4174,
+								4302
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1922.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			],
+			[
+				0,
+				1,
+				1,
+				2
+			],
+			[
+				1,
+				1,
+				2,
+				2
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.5,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			0.5,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"in",
+				"/Users/franck/Dropbox/WebMobileII/web/ParisTrack/index.html"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 246.0,
+	"status_bar_visible": true
+}

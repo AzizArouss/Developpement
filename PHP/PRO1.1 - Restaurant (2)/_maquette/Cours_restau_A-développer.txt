@@ -1,0 +1,78 @@
+A développer
+-------------
+classes 
+	UserSession.class.php
+	UserSessionFilter.class.php
+
+config
+	database.php -> info de connexion
+
+controllers
+	HomeController.class.php -> httpGetMethod();
+	admin
+		AdminController.class.php
+		meal
+			MealController.class.php
+		user
+			UserController.class.php
+	basket
+		BasketController.class.php
+	booking
+		BookingController.class.php
+	meal
+		MealController.class.php
+	order
+		OrderController.class.php
+		payment
+			PaymentController.class.php
+			success
+				SuccessController.class.php
+		validation
+			ValidationController.class.php
+	user
+		UserController.class
+		login
+			LoginController.class.php
+		logout
+			LogoutController.class.php
+forms
+	AdminUserForm.class.php
+	LoginForm.class.php
+	UserForm.class.php
+models
+	BookingModel.class.php
+	MealModel.class.php
+	OrderModel.class.php
+	UserModel.class.php
+www
+	HomeView.phtml -> a compléter
+	LayoutView.phtml
+	admin
+		AdminView.phtml
+		meal
+			MealView.phtml
+		user
+			UserView.phtml
+	basket
+		BasketView.phtml
+	booking
+		BookingView.phtml
+	js
+		main.js
+		utilities.js
+		classes
+			BasketSession.class.js
+			FormValidator.class.js
+			OrderForm.class.js
+	order
+		OrderView.phtml
+		payment
+			PaymentView.phtml
+				success
+					SuccessView.phtml
+	user
+		UserView.phtml
+		login
+			LoginView.phtml
+
+

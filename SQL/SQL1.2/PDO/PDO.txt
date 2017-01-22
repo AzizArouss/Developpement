@@ -1,0 +1,7 @@
+1 > On effectue la connexion à la base
+	On précise l'encodage de la réponse
+
+2 > On va déclarer la requête SQL
+3 > Prépare la requête
+4 > On l'execute
+5 > On peut récupérer soit la totalité, soit une ligne

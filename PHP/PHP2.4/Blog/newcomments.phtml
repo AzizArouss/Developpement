@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ZXX">
+<head>
+	<meta charset="utf-8">
+	<link rel= "stylesheet" href= "font-awesome/css/font-awesome.min.css" >
+	<link href="https://fonts.googleapis.com/css?family=Candal|Open+Sans" rel="stylesheet"> 
+	<link href="index.css" rel="stylesheet" media="all" type="text/css">
+	<title>Blog</title>
+</head>
+<body>
+	<header>
+		<h1><i class="fa fa-microphone" aria-hidden="true"><a href="#">Encore un blog ?! #Nonmaisallo</a></i></h1>
+		<div class="admin">
+		<i class="fa fa-cogs" aria-hidden="true"></i><a href="#">Administration</a>
+		</div>
+	</header>
+	<main class="artik">
+		<h2><i class="fa fa-home" aria-hidden="true"></i>Article</h2>
+		<article>
+			<h3><i class="fa fa-hand-o-right" aria-hidden="true"></i> <?=$article["Title"];?></h3>
+			<p><?=$article["Contents"];?></p>
+			<h3>Commentaire</h3>
+			<?php foreach ($article2 as $index => $ligne) {?>
+				<h4><?=$article2[$index]["NickName"];?></h4>
+				<p><?=$article2[$index]["Contents"];?></p>
+			<?php } ?>
+		</article>
+			<form method="post" action="traitementcomments.php">
+ 			<fieldset>
+       			<legend>Nouveau commentaire</legend>
+       			<label>Pseudo</label><br><input class="tit" type="text" name="Pseudo"><br>
+       			<label>Commentaire</label><br><textarea class="art" name="Contenu"></textarea><br>
+       			<button class="enr">Enregistrer</button>
+       			<button class="ann">Annuler</button>
+       			</div>
+  			</fieldset>
+		</form>
+	</main>
+	<footer>
+		<p>Le blog des élèves de la 3W Academy</p>
+	</footer>
+</body>
+</html>

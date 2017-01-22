@@ -1,0 +1,19 @@
+section {
+    width: 90%;
+    margin: auto;
+}
+
+section{
+	margin-bottom: 10px;
+}
+legend{
+	background-color: white;
+	padding: 3px
+}
+
+#liste_data li{
+	cursor: pointer;
+}
+#liste_data li:hover{
+	color: red;
+}

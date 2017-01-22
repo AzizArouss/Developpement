@@ -1,0 +1,256 @@
+Framwork basé sur Symphony
+**************************
+**************************
+
+Exercice:
+*********
+
+A/ Réaliser une application de commande de plats et de réservation pour un restaurant qui
+	-> affiche l'ensembe de la carte du restaurant
+	-> permet de créer un compte client
+	-> après log, le client voit un "bonjour prénom nom s'afficher avant Déconnexion"
+	-> page de réservation d'une table avec confiormation de réservation
+	-> page de commande de plats avec menu déroulant et bouton ajouter, en choisissant la quantité
+		/ en cliquaunt sur ajouter le plat apparait en dessous dans "récapitulatif de commande"
+			en regard du prix un "corbeille" permet de supprimer l'article.
+		/ en cliquant sur annuler on revient à la page d'accueil (liste des plats), mais le récapitulatif, garde sa commnde en cours
+		/ En cliquant sur "valider la commande" on arrive sur la page Récap de commande
+	-> Récapitulatif de commande avec liste des produits et payer ou annuler
+		/ annuler fait revenir sur la page d'accueil sans vider le caddie
+		/ payer envoi sur la page validation de commande.
+
+
+B/ Coder la partie Admin qui permet 
+	-> de suivre l'état des commandes (en cours et livrés) liste de commandes
+		/ en editant une commande on a le détail de la commande avec un bouton "livré" qui change l'état de la commande à "En cours" à "livrée"
+	-> d'ajouter des plats au menu
+
+
+
+Tables de la BDD
+***************
+
+1. Design ensemble avec toute la classe de la base de données au tableau blanc en mode Merise ==> 1h-1h30
+Les challenger en mode gestion de projet avec un cahier des charges : que doit contenir LE COEUR d'une application web de e-commerce ?
+Qu'est-ce qui est du ressort des fonctionnalités d'un e-commerce et qui ne l'est pas ?
+Par exemple gérer les stocks et la livraison en détails ou la TVA c'est plutôt pour la logistique, la comptabilité, etc.
+
+2. TP dans phpMyAdmin de construction de la base de données à la main ==> 1h30
+Le nom des tables et des colonnes doit être exactement comme dans le corrigé :
+noms au singulier, PascalCase, un underscore séparant le nom d'une table de la colonne pour les clés étrangères, exemple : Order_Id
+
+Rappels sur la différence entre CHAR (fixe avec blancs si trop court, à virer avec fonctions trim, ~8000 caractères), VARCHAR (variable, ~8000 caractères) et TEXT (4 Go de taille, très lent)
+Rappels sur la différence entre TINYINT (8 bits), SMALLINT (16 bits), INT (32 bits), BIGINT (64 bits)
+Présenter les type DATE, TIME, DATETIME
+Faire des timestamps pour tracer les actions avec des colonnes de type DATETIME et utilisation de SQL NOW() au moment de l'INSERT
+Tous les autres types sont non standard, ne pas en parler, et surtout ne jamais utiliser le type TIMESTAMP qui est un faux ami
+
+La colonne Password doit obligatoirement faire 64 caractères (hachage stocké en BDD, voir modèle UserAccountModel)
+La colonne Email doit avoir un index UNIQUE
+Mettre des AUTO_INCREMENT sur toutes les clés primaires
+
+Expliquer le fonctionnement des clés étrangères et des différents types d'index : INDEX, UNIQUE, PRIMARY KEY, TEXT
+Créer des indexes INDEX sur les clés étrangères, UN PAR UN (phpMyadmin fait n'importe quoi si on créé d'un coup plusieurs index dans une table, il créé un index composite, rien à voir)
+
+Ne pas oublier de montrer les contraintes d'intégrité référentielle
+http://img11.hostingpics.net/pics/155032phpMyadminvuerelationnelle.jpg
+En montrant le ON DELETE et ON UPDATE en mode CASCADE, qu'est ce qu'il se passe.
+L'exemple d'un blog est assez parlant : on peut en un DELETE d'une ligne d'une table de blog supprimer tous les articles du blog puis tous les commentaires de toutes les articles du blog.
+
+Les challenger au moment de la création de la BDD en mode "utiliser les types SQL à bon escient, le plus petit possible, pour les performances"
+Exemple CHAR est bon pour code postal et téléphone, le nombre de sièges pour réserver une table est TINYINT, 256 sièges c'est plus qu'un buffet déjà :-) etc.
+
+Primary key sur tous les "Id"
+User
+	Id, FirsName, LastName, Email, Password(64 caractères), BirthDate, Adress, City, ZipCode, Country, Phone, CreationTimestamp, LastLoginTimestamp
+	UNIQUE Email
+
+Meal
+	Id, Name, Photo, Description, QuantityInStock, BuyPrice, SalePrice
+
+Booking
+	Id, BookingDate, BookingTime, NumberOfSeats, User_Id, CreationTimestamp
+	FK -> User_Id
+
+Order
+	Id, User_Id, TotalAmount, TaxRate, TaxAmount, CreationTimestamp, CompleteTimestamp
+	FK -> User_Id
+
+Orderline
+	Id, QuantityOrdered, Meal_Id, Order_Id, PriceEach
+	FK -> Meal_Id et Order_Id
+
+Pour les clefs étrangères
+Table_Id -> User_Id
+
+Pour accéder au clefs étrangères
+1/ Avec PHPMyAdmin et la vue relationnelle
+http://img11.hostingpics.net/pics/155032phpMyadminvuerelationnelle.jpg
+
+2/ En tapant dans l'onglet SQL
+ALTER TABLE `Table`
+  ADD CONSTRAINT `Table_ibfk_1` FOREIGN KEY (`Table2_Id`) REFERENCES `Table2` (`Id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+  OU Table        = la table sur laquelle on crée la clef étrangère
+  et table2       = la table d'ou provient la clef étrangère
+  -> Table_ibfk_1 = nom de la clef étrangère
+  -> Table2_Id    = nom de la colonne dans la table Table
+  -> Table2       = table d'origine de la clef étrangère
+  -> Id           = nom de la colonne dans la Table2
+
+
+Montrer les contraintes dans une table
+--------------------------------------
+SELECT *
+FROM INFORMATION_SCHEMA.TABLE_CONSTRAINTS
+WHERE TABLE_NAME = 'Table'
+
+
+Suppression d'une colonnne index
+--------------------------------
+ALTER Table
+	DROP INDEX nom_index
+
+Plus généralement commande ALTER
+--------------------------------
+ALTER [IGNORE] TABLE nom_de_table alter_spec [, alter_spec ...]
+ 
+alter_specification:
+        ADD [COLUMN] create_definition [FIRST | AFTER nom_colonne ]
+  ou    ADD [COLUMN] (create_definition, create_definition,...)
+  ou    ADD INDEX [nom_index] (index_nom_colonne,...)
+  ou    ADD PRIMARY KEY (index_nom_colonne,...)
+  ou    ADD UNIQUE [nom_index] (index_nom_colonne,...)
+  ou    ADD FULLTEXT [nom_index] (index_nom_colonne,...)
+  ou    ADD [CONSTRAINT symbol] FOREIGN KEY [nom_index] (nom_colonne_index,...)
+            [reference_definition]
+  ou    ALTER [COLUMN] nom_colonne {SET DEFAULT literal | DROP DEFAULT}
+  ou    CHANGE [COLUMN] ancien_nom_colonne create_definition
+               [FIRST | AFTER nom_de_colonne]
+  ou    MODIFY [COLUMN] create_definition [FIRST | AFTER nom_colonne]
+  ou    DROP [COLUMN] nom_colonne
+  ou    DROP PRIMARY KEY
+  ou    DROP INDEX nom_index
+  ou    DISABLE KEYS
+  ou    ENABLE KEYS
+  ou    RENAME [TO] nouveau_nom_de_table
+  ou    ORDER BY col
+  ou    table_options
+
+
+
+3. Afficher la ressource Moodle "Projet - Données" pour insérer des données existantes dans la table Meal  ==> 30min max
+Le temps de vérifier que tout le monde a sa BDD de prête et n'a pas fait de grosse erreur pour le code ensuite
+
+
+Fonctionnement
+**************
+
+Expliquer le principe du routing : les URLs ne peuvent pas correspondre toujours au système de fichiers du serveur.
+
+L'exemple des archives d'un blog est assez parlant : comment construire une URL www.monblog.fr/archives/2014/06 ??
+On ne va pas faire un dossier pour chaque nouvelle année, chaque mois, avec un contrôleur s'occupant de ce mois et de cette année en question...
+
+Le micro-framework va s'occuper de faire 3 choses importantes :
+1. Déterminer quel contrôleur exécuter
+2. Déterminer quelle méthode du contrôleur exécuter (en fonction de la méthode HTTP)
+3. Déterminer quelle vue afficher si le contrôleur ne fait pas de redirection HTTP (exemple après un HTTP POST)
+
+L'URL est virtuelle à partir du fichier index.php à la racine du projet.
+index.php suit le principe du design pattern front controller, comme la plupart des frameworks sur le marché (ne pas expliquer ça)
+
+Par exemple en tapant http://localhost/resto/index.php/user
+
+Le contrôleur UserController est exécuté dans le dossier application/controllers/user/UserController.class.php
+La vue affichée UserView suit le même principe à partir du dossier application/www
+
+Noter la transformation en PascalCase des noms des fichiers à partir de l'URL.
+
+Le mieux est de donner cet exemple au tableau ou dans un sharecode
+
+
+La micro-framework s'occupe également de l'autoload de classes et de créer deux variables disponibles dans les vues :
+- $requestUrl qui pointe vers l'URL du front controller index.php
+Utilisé pour créer des hyperliens vers des contrôleurs
+
+- $wwwUrl qui pointe vers l'URL vers le dossier www contenant les vues et les fichiers statiques
+Utilisé pour charger CSS, images, fonts, JavaScript, etc...
+
+
+Le coeur du micro-framework se trouve dans FrontController.class.php
+Il ne sert à rien de faire ouvrir les fichiers du dossier library aux élèves, les plus curieux le feront.
+L'implémentation est écrite de manière à ce que le code des élèves ressemble à Symfony 2.
+
+
+
+
+Voici déjà en gros l'ordre de construction du projet :
+
+1. Base De Données
+1.1 Analyse Merise "de quelles données a-t'on besoin pour un e-commerce ?"
+1.2 Construction de la BDD avec phpMyAdmin, présentation des types SQL, des types d'index, des contraintes d'intégrité référentielles
+1.3 Import des données de la table Meal (et donc vérification du schéma correct des élèves au moins pour cette table)
+
+2. Présentation du framework et page d'accueil
+2.1 Fonctionnement des URLs virtuelles après index.php, quel contrôleur, quelle vue
+2.2 Passage des données du contrôleur à la vue via tableau associatif en return dans le contrôleur
+2.3 Présentation de l'affichage : LayoutView qui inclut la vue ensuite, faire un schéma au tableau en mode "poupées russes"
+2.4 Présentation de la classe Database du micro framework
+2.5 Création du modèle MealModel méthode listAll
+2.6 Création du contrôleur HomeController
+2.7 Création de la vue HomeView sans le flash bag, uniquement concentrée sur l'affichage de la carte du restaurant
+
+3. Création de compte utilisateur (mot de passe en clair, pas de validation de données)
+3.1 Création de UserView
+3.2 Création de UserController
+3.3 Création de UserModel méthode signup
+
+4. Validation des données
+4.1 Chiffrement sécurisé de mots de passes (je te prépare une note d'explication)
+4.2 Implémentation de la méthode hashPassword et utilisation dans la méthode signup de UserModel
+4.3 Ajout du code vérifiant qu'un utilisateur existe déjà avec cet email (en cas d'erreur faire un die("erreur fatale") sans exceptions pour le moment)
+
+5. Authentification et session
+5.1 Création de LoginView
+5.2 Création de UserModel méthode signin avec la vérification de l'email puis du mot de passe (en cas d'erreur faire un die("unknown user / bad password") sans exceptions pour le moment)
+5.3 Création de UserSession
+	on crée une class UserSession.class.php (mis dans le dossier [classes]) qui va implémenter les methodes suivantes :
+	function __construct{
+		session_start();
+	}
+
+	function create(){
+		// mise en session des valeurs de prenom, nom, id et mail
+	}
+
+
+5.4 Création de LoginController
+
+6. Login / Logout et interface
+6.1 Création de LogoutController
+6.2 Mise à jour de LayoutView avec interface de navigation en mode connecté et déconnecté, ajout de tous les boutons y compris vers URLs non implémentées (réservation, commande, etc.)
+
+7. Réservation et flash bag
+7.1 Création de BookingView (pourquoi pas en version jQuery UI avec DatePicker ?)
+7.2 Création de BookingController
+7.3 Création de BookingModel
+7.4 Ajout d'un message de notification "votre réservation est bien enregistrée", principe du flash bag
+7.5 Implémentation de l'affichage du flash bag dans HomeView
+
+8. Validation de données côté serveur
+8.1 Ajout des exceptions dans UserController et LoginController
+8.2 Ajout des classes de formulaire permettant de les re-remplir (voir dossier /form de l'application et un exemple simple avec champ email LoginView / le catch de LoginController)
+
+9. Validation de données côté client
+9.1 Création de main.js
+9.2 Création de la classe de validation de formulaire en s'appuyant sur LoginView
+9.3 Implémentation de la validation dans UserView
+
+10. Commande client 1
+
+11. Commande client 2
+
+12. Récapitulatif de la commande
+12.1 Transfert des données de session dans la base de données
+12.2 Création de PaymentView
+12.3 Création de PaymentController

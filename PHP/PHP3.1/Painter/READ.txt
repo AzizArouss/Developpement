@@ -1,0 +1,7 @@
+Jeudi 15 > Lundi 19
+POO en PHP > Exercice avec du SVG
+
+attributs ou proprietes > variables
+methodes > fonctions utilisés
+
+différence entre private et public, private, ce qu'on nomme en private on peux y acceder seulement a partir de la class, sans que ça interfere avec le reste !

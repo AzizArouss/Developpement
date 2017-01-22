@@ -1,0 +1,13 @@
+.center {text-align:center;}
+
+a.lien { color:#2193BD; font-weight:bold; font-size:1.2em; text-decoration:underline; }
+a.lien:hover { color:#333; }
+
+div#container { width:600px; margin:100px auto; padding:25px; border:1px solid #bbb; }
+
+div#connexion fieldset{ margin-bottom: 15px;padding: 0 10px; background: #f2f2f2; border: 0; }
+div#connexion legend{ padding: 5px; background: #2193bd; font-weight: bold; color: #fff; }
+div#connexion label{ width:150px; display:block; float:left; }
+div#connexion input.bouton { cursor:pointer; background:#2193bd url(asterisk_yellow.png) no-repeat 5px 50%; padding:4px 10px; color:#fff; border:none; font-weight:bold; padding-left:20px; }
+div#connexion span#erreur {color:#f00; font-weight:bold; font-size:0.8em; }
+div#connexion span#confirmMsg {color:#2193bd; font-weight:bold; font-size:0.8em; background: url(asterisk_yellow.png) no-repeat 0 -1px; padding-left:20px; line-height:18px; }

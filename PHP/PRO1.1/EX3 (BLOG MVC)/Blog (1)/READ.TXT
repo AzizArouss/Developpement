@@ -1,0 +1,13 @@
+MVC BLOG
+
+Controleur
+	> Acceuil.php
+	+ Admin.php
+
+Modèle
+	> Acceuil.php
+	+ Admin.php
+
+Vue
+	> Acceuil.phtml
+	+ Admin.phtml

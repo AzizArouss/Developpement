@@ -1,0 +1,5 @@
+<h2>En tête secondaire</h2>
+<ul>
+	<li>Ce contenu vient du côté serveur en PHP</li>
+	<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse aliquam faucibus eros ut tristique. Sed aliquam posuere viverra. Vestibulum at quam sit amet odio commodo semper at in sapien. Nullam dolor ante, facilisis quis lobortis non, placerat at erat. Donec mauris lectus, vehicula quis ornare quis, vulputate eu arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam arcu justo, fermentum at quam eget, vehicula sollicitudin metus. Ut lacinia dapibus tristique. Nulla vitae arcu nisl. Aliquam erat volutpat. Donec faucibus, tortor non maximus pulvinar, sapien lectus vehicula tortor, vel cursus arcu velit quis leo. Vivamus sollicitudin ligula scelerisque dolor gravida ullamcorper. Integer porta orci vel aliquam fermentum.</li>
+</ul>

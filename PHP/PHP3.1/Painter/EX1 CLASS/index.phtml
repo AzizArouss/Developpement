@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>EX1 POO PHP</title>
+</head>
+<body>
+	<section>
+	<h1>personnage.class.php</h1>
+	<!--public function parler(){-->
+	<p><?= $perso -> parler();?></p>
+	<!--public function fermer(){-->
+	<p><?= $perso -> fermer();?></p>
+	<!--public $age = "50";-->
+	<p><?= $perso -> age;?></p>
+	<!--public function get_prenom(){-->
+	<p><?= $perso -> get_prenom();?></p>
+	<!--public function set_prenom($prenom){-->
+	<p><?= $perso -> set_prenom("Malka");?></p>
+	</section>
+	<section>
+	<h1>rectangle.class.php</h1>
+	<!--public function get_p(){-->
+	<p>get_p = <?= $rect -> get_p();?></p>
+	<!--public function get_a(){-->
+	<p>get_a = <?= $rect -> get_a();?></p>
+	</section>
+	<section>
+	<h1>triangle.class.php</h1>
+	<!--public function get_pr(){-->
+	<p>get_pr = <?= $tri -> get_pr();?></p>
+	<!--public function get_ar(){-->
+	<p>get_ar = <?= $tri -> get_ar();?></p>
+	</section>
+	<section>
+	<h1>carre.class.php</h1>
+	<p>get_pr = <?= $car -> get_pr();?></p>
+	</section>
+</body>
+</html>

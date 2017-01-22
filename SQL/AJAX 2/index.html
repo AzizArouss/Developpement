@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript</title>
+    <!--<link rel="stylesheet" href="css/normalize.css">-->
+    <!--<link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">-->
+    <!--<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans">-->
+
+    <link rel="stylesheet" href="style.css">
+    <!-- Librairie jQuery -->
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="envoi_fichier.js"></script>
+    <!-- Fonctions du projet -->
+</head>
+<body>
+    <header>
+        <h1><i class="fa fa-flask"></i> Exercice AJAX 2</h1>
+    </header>
+    <main>
+        <section id="target" method="POST" action="recup_form.php">
+        </section>
+        <form id="waifu">
+            <fieldset><legend>Formulaire</legend>
+            Prénom :<br>
+            <input type="text" name="Prenom"><br>
+            Nom :<br>
+            <input type="text" name="Nom"><br>
+            <input type="submit" name="executer" value="executer" id="executer">
+        </form>
+        </fieldset>
+   </main>
+   <script src="main.js"></script>
+</body>
+</html>

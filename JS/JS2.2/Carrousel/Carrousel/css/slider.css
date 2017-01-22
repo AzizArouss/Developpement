@@ -1,0 +1,29 @@
+body {
+	background-image: url(../images/concrete_seamless.png);
+}
+
+h1 {
+	color: #0F6177;
+}
+
+#bouton {
+	text-align: center;
+}
+
+section img {
+	 transition:transform .9s;
+	 transform: rotate(-3deg);
+	 margin-left: 600px;
+	 margin-top: 50px;
+	 margin-bottom: 50px;
+	 border: 10px solid white;
+	 border-radius: 18px;
+}
+
+footer {
+	text-align: center;
+}
+
+.hide {
+	display: none;
+}

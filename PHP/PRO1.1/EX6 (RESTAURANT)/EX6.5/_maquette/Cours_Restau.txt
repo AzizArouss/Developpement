@@ -1,0 +1,266 @@
+Cours Restau
+
+Les bonnes pratiques sont les "DESIGN PATTERN"
+Un ded ceux ci est le MVC
+Modèle, Vue, Controller
+
+On va séparer la logique du code en trois partie
+
+MODELE, 
+	Gère les données, récupère dans la base de donnée, les organiser pour que ensuite le controller puisse les traiter
+	Si on ne ait aps de requete SQL, on fera sans doute des oouverture et fermeture de fichiers, qui contiendront les données en question
+
+VUE,
+	C'est la partie purement HTML, on y fait e ll'affichage de données et aussi des boucles pour afficher des listes.
+
+CONTROLLEUR
+	C'est lui qui gère la logique et prend les décisions, entre autre c'est lui qui gère les droits d'accès.
+
+Ainsi 
+Controlleur <- -> Modèle
+	¡
+	vue
+
+le controlleur fait des aller-retour entre lui et les modèles, puis une fois ok affiche l'information dans une vue
+
+
+
+define("BLOG", 1);
+defined("BLOG");
+
+Création de la class Connect
+****************************
+****************************
+script index.php
+<?php
+// inclut l'autoloader de class
+include_once('class/Autoloader.class.php');
+Autoloader::autoloading();
+
+Class connection à la base de donnée
+Class Connect{
+	
+}
+
+
+Création espace membre
+**********************
+**********************
+
+Page inscription, connexion, déconnexion
++ page à accès réservées
+
+Création de la table
+********************
+champs id, pseudo, pass, email, daate_inscription
+éventuellement une table groupe avec ajout d'un champ id_groupe
+
+Hashage du mot de passe (sha1 mini)
+
+Page inscription
+****************
+Vérification des informations de l'utilisateur
+Pseudo et email juste 1 fois
+2 mots de passe identiques
+vérifier si l'adresse e-mail est bien un email (regex)
+
+Si condition true --> inscription dans la base
+
+
+Page connexion
+**************
+pseudo, mot de passe, connexion automatique (mot de passe et pseudo oubliés)
+
+si les conditions sont ok, alors on accède à la page membre
+on crée une variable session['membre']['pseudo'] et ['droit']
+
+
+Transformer en nom de variable associé à sa valeur, les index d un tableau
+*************************************************************************
+script test_varible.php
+-----------------------
+<?php
+$tab = [index1 => 'val1', index2 => 'val2', index3 => 'val3'];
+
+// on boucle sur le tableau pour :
+// déclarer en variable les noms d'indice
+//			${$key}
+// et on associe à cette variable sa vlaur stockée
+//			$val
+foreach($tab as $key => $val){
+	${$key} = $val;
+}
+
+// si on essaye d'afficher
+// $index1 ou $index2
+echo $index1; // affiche val1
+echo $index2; // affiche val2
+// etc.
+
+
+Utilisation de la variable globale $_SESSION
+********************************************
+Pour pouvoir utiliser cette variable, on doit le déclarer au début de notre script
+
+Cette variable va alor être transportée d'un script à l'autre. 
+Dans la mesure ou le script destinataire démarre aussi une session, les 2 scripts vont échanger les données de la variable global  $_SESSION
+
+exemple
+script1.php
+-----------
+<?php
+session_start();
+$tab = [index1 => 'val1', index2 => 'val2', index3 => 'val3'];
+
+$_SESSION['user']['iduser'] =1;
+$_SESSION['tab'] =$tab;
+
+header('location: script2.php');
+?>
+
+
+script2.php
+-----------
+<?php
+session_start();
+
+var_dump($8SESSION); 
+// va afficher
+// 'user' => 1,
+// 'tab'  => [
+		'index1' => 'val1',
+		'index2' => 'val2',
+		'index3' => 'val3',
+] 
+
+
+
+Gestion des erreurs avec try catch
+**********************************
+
+de manière directe
+
+exemple vérification des numéros de téléphone
+
+script.php
+----------
+$mobile = '0123456789';
+
+if (!is_numeric($mobile) )
+  {
+    // On lance une nouvelle exception grâce à throw et on instancie directement un objet de la classe Exception.
+    throw new Exception('Le numéro de télphone doit être des caractères numériques');
+  }
+
+
+
+De manière indirecte
+
+script.php
+----------
+// gestion des erreurs
+function affiche_string($var){
+	if (is_array($var)){
+		throw new Exception('La variable $var est un tableau, ce doit être un string');
+	}
+	echo $var.'<br>';
+};
+
+$var = 17;
+$tab = ['index1' => 'val1', 'index2' => 'val2', 'index3' => 'val3'];
+
+try // Nous allons essayer d'effectuer les instructions situées dans ce bloc.
+{
+  affiche_string($var);
+  affiche_string($tab);
+}
+catch (Exception $e) // On va attraper les exceptions "Exception" s'il y en a une qui est levée
+{
+  echo 'Une exception a été lancée. Message d\'erreur : ', $e->getMessage();
+}
+
+
+
+
+
+
+
+
+
+// Save the project root directory as a global constant.
+define('ROOT_PATH', __DIR__);
+
+/*
+ * Create a global constant used to get the filesystem path to the
+ * application configuration directory.
+ */
+define('CFG_PATH', realpath(ROOT_PATH.'/application/config'));
+
+/*
+ * Create a global constant used to get the filesystem path to the
+ * application public web root directory.
+ *
+ * Can be used to handle file uploads for example.
+ */
+define('WWW_PATH', realpath(ROOT_PATH.'/application/www'));
+
+
+
+/* fonctions a voir */
+/* **************** */
+
+variables globales
+------------------
+$_SERVER,
+$_SESSION
+
+chemin de fichiers et fichiers
+------------------------------
+realpath,
+__DIR__,
+file_exists
+
+variables sessions
+------------------
+session_start,
+session_status
+
+Gestion des imports
+-------------------
+spl_autoload_register,
+
+
+Gestion des erreurs
+-------------------
+error_reporting,
+set_error_handler,
+throw new -> envoi une un method_existsge d'erreur
+	throw new Exception('Erreur à afficher');
+
+try // Nous allons essayer d'effectuer les instructions situées dans ce bloc.
+{
+	// du code
+}catch (Exception $e) // Nous allons attraper les exceptions "Exception" s'il y en a une qui est levée.
+	echo 'Une exception a été lancée. Message d\'erreur : ', $e->getMessage();
+}
+
+
+
+string
+------
+ctype_alnum
+
+
+tableaux
+--------
+array_pop,
+array_shift,
+extract,
+unset
+
+sur les class
+-------------
+interface,
+instanceof,
+method_exists
+

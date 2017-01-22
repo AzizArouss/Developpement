@@ -1,0 +1,23 @@
+table {
+	padding: 5px;
+	background-color: red;
+	align: center;
+}
+
+td {
+	padding: 10px;
+	border: 1px solid black;
+	text-align: center;
+}
+
+td:first-child {
+	background-color: #f2f2f2;
+}
+
+tr {
+	padding: 50px;
+}
+
+tr:first-child {
+	background-color: #f2f2f2;
+}

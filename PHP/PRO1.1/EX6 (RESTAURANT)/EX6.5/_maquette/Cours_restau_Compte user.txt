@@ -1,0 +1,40 @@
+Cours Restau _ création de compte user
+Base de données
+-- phpMyAdmin SQL Dump
+-- version 4.0.10deb1
+-- http://www.phpmyadmin.net
+--
+-- Client: localhost
+-- Généré le: Mer 21 Décembre 2016 à 16:57
+-- Version du serveur: 5.5.52-0ubuntu0.14.04.1
+-- Version de PHP: 5.5.9-1ubuntu4.20
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+--
+-- Base de données: `blogeurs`
+--
+CREATE DATABASE IF NOT EXISTS `blogeurs` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE `blogeurs`;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `users`
+--
+
+DROP TABLE IF EXISTS `users`;
+CREATE TABLE IF NOT EXISTS `users` (
+  `idusers` int(11) NOT NULL AUTO_INCREMENT,
+  `prenom` varchar(255) NOT NULL,
+  `nom` varchar(255) NOT NULL,
+  `mail` varchar(100) NOT NULL,
+  `mobile` varchar(15) NOT NULL,
+  `pass` varchar(50) NOT NULL,
+  `date_crea` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `pseudo` int(11) NOT NULL,
+  PRIMARY KEY (`idusers`),
+  UNIQUE KEY `mail` (`mail`,`pseudo`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+

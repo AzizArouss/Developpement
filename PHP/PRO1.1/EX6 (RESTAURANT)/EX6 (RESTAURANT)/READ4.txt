@@ -1,0 +1,30 @@
+User >
+		> Login
+		> Logout
+
+loginController
+
+1/ mail + pass -> GET
+
+2/ verif si valide dans la table user POST
+		loginController avec userModel
+
+3/ si valide
+		crée session avec userSession
+
+4/ si non valide
+		renvoi l'erreur
+
+Création de UserSession a partir du controller loginCOntroller
+--------------------------------------------------------------
+	on crée une class UserSession.class.php (mis dans le dossier [classes]) qui va implémenter les methodes suivantes :
+	function __construct{
+		session_start();
+	}
+
+	function create(){
+		// mise en session des valeurs de prenom, nom, id et mail
+	}
+
+	cette class est instanciée dans le cas où les infos du user sont correct (mail et pass ok)
+    pour utiliser la methode create

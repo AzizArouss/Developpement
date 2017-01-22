@@ -1,0 +1,22 @@
+
+<form method="post" action="index.php?page=connexion">
+	<ul>
+		<?php if (!empty($err_connecterror)){ ?>
+		<li class="alert alert-warning" role="alert">
+			<span id="erreurConnection" ><?= $err_connecterror; ?></span>
+		</li>
+		<?php } ?>
+
+		<li class="form-group">
+			<label for="pseudo">Pseudo</label>
+			<input type="text" name="pseudo" id="pseudo" class="form-control" value="<?= $pseudo; ?>">
+		</li>
+		<li class="form-group">
+			<label for="pass">Pass</label>
+			<input type="password" name="pass" id="pass" class="form-control" value="<?= $pass; ?>">
+		</li>
+		<li>
+			<input type="submit" name="boutton" value="Ouvrir" class="btn btn-default">
+		</li>
+	</ul>
+</form>

@@ -1,0 +1,20 @@
+.rectangle {
+	background-color: #4169e1;
+	width: 400px;
+	height: 300px;
+	border-radius: 50px;
+	margin: 20px;
+	transition: background-color 0.5s;
+}	
+
+.good {
+	background-color: #32cd32;
+}
+
+.important {
+	background-color: #b22222;
+}
+
+.hide {
+	display: none;
+}

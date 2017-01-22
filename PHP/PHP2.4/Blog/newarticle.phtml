@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang = "ZXX">
+<head>
+  <meta charset = "utf-8">
+  <link rel = "stylesheet" href = "font-awesome/css/font-awesome.min.css" >
+  <link href = "https://fonts.googleapis.com/css?family=Candal|Open+Sans" rel = "stylesheet"> 
+  <link href = "index.css" rel = "stylesheet" media = "all" type = "text/css">
+  <title>Rédiger un nouveau article 2/5</title>
+</head>
+<body>
+  <header>
+    <h1><i class = "fa fa-microphone" aria-hidden = "true"><a href = "#">Encore un blog ?! #Nonmaisallo</a></i></h1>
+    <div class = "admin">
+    <i class = "fa fa-cogs" aria-hidden = "true"></i><a href = "#">Administration</a>
+    </div>
+  </header>
+  <main>
+    <form method = "post" action = "traitement.php">
+      <fieldset>
+            <legend>Nouvel Article</legend>
+            <!--Titre-->
+            <label>Titre</label><input class="tit" type="text" name="Titre">
+            <!--Article-->
+            <label>Article</label><textarea class="art" name="Article"></textarea>
+            <!--Auteur-->
+            <select name="Auteur" size="1">
+              <?php foreach ($author as $index => $ligne) {?>
+                <option value="<?=$author[$index]["Id"];?>">
+                  <?=$author[$index]["FirstName"];?><?=$author[$index]["LastName"];?> 
+                </option>
+              <?php } ?>
+            </select>
+            <!--Catégories-->
+            <select name="Categorie" size="1">
+              <?php foreach ($category as $index => $ligne) {?>
+                <option value="<?=$category[$index]["Id"];?>">
+                  <?=$category[$index]["Name"];?></option>
+                </option>
+              <?php } ?>
+            </select>
+            <!--Boutton-->
+            <div class="boutton">
+              <button>Enregistrer</button>
+              <button>Annuler</button>
+            </div>
+        </fieldset>
+    </form>
+  </main>
+  <footer>
+    <p>Le blog des élèves de la 3W Academy</p>
+  </footer>
+</body>
+</html>

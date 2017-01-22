@@ -1,0 +1,35 @@
+--> Evenements sur le canvas
+
+1 > MouseOver(true) ou MouseLeave(false)
+2 > MouseDown(true)
+3 > MouseUp(false)
+4 > MouseMove
+
+Les trigger(s)
+
+<section id = "target_1">On m'utilise</section>
+$(function(){
+	$('h1').on('click',function(){
+		$('#target_1').html('Click sur h1');
+	});
+	$('canvas').on('hover', function(){
+		$('h1').trigger('click');
+	});
+});
+
+--> Evenement personalisé
+
+$(select).on('Even_truc', function(){
+	$(autre_select).show();
+});
+
+$(select).trigger('Even_truc');
+
+Procédurale -----> var Objet = function(){
+	var var1 -----> this.var1;
+	var var2 -----> this.var2;
+
+	function ma_fonc(){} -----> this.ma_fonc = function(){};
+	function ma_fonc2(){} -----> Objet.prototype.ma_fonc2 = function(){};
+}
+

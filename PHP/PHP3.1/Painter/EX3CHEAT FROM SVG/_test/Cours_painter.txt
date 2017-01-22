@@ -1,0 +1,393 @@
+Cours Painter
+
+POO Php
+*******
+
+Qu'est-ce que la POO ?
+
+Comme en javascript cela va nous permettre de penser et conceevoir nos programme comme des objets qui s'assemblent entre eux.
+
+En php la description des objet se fait dans une class
+
+Une class
+
+Class Ma_class{ // 1ere lettre en maj par convention
+	var attribut1; // ou propriétés
+	var attribut2;
+
+	function ma_fonction1(){ // méthodes
+
+	};
+	function ma_fonction2(){
+
+	};
+}
+
+exemple pour un jeu
+les attributs peuvent être : la force, l'expéreince, les dégats
+les actions possibles : frapper, gagnerExpérience, déplacer
+
+Class Personnage{
+	private $_force; // public : On peut y accéder en l'appelalnt depuis l'objet 
+	private $_force; // ou private : on n'y accèdera que depuis ma class elle même
+	private $_force;
+
+	public function frapper(){ // par défaut public
+
+	}
+	private function gagnerExperience(){ // par défaut public
+
+	}
+
+}
+
+
+Comment uutiliser une class
+Tout d'abord on va l'inclure dans notre script index php
+ensuite on va "l'instancier", c'est à dire qu'on va l'affeter à une nouvelle variable qui sera notre objet :
+$perso1 = new Personnage();
+
+Reprenons notre personnage
+class Personnage{
+	private $_prenom;
+	private $_prenom;
+	public $_naissance;
+
+	public fonction parler(){
+		echo "J'apprend la POO PHP";
+	}
+}
+
+$perso1 = new Personnage();
+
+appel parler() = $perso1->parler();
+
+Accéder à une propriété depuis l'obejt : $perso1->_naissance;
+rien ne s'affiche alors on lui affecte la valeur 10 et ensuite on l'affiche
+
+Accéder une propriété depuis la class
+$this->prenom
+
+Pourquoi met on les propriétés en private ou protected (intégrité des information)
+Seter et Geter
+
+sous class et heritage
+
+__construct($arg1, $arg2){ $this->arg1 = $arg1;....}
+
+constantes  
+const CONSTANT = 'valeur constante';
+echo MyClass::CONSTANT; // depuisz l objet
+self::CONSTANT // depuis la class
+
+Statique function
+public static function parler(){
+	echo 'Je vais tous vous tuer !';
+}
+MaClass::parler();
+
+ou
+
+private static $_texteADire = 'Je vais tous vous tuer !';
+MaClass::$_texteADire;
+self::$_texteADire; // On donne le texte à dire.
+
+// dessiner du svg
+
+
+// ***********************************************************************
+
+imbrication de class
+
+abstract
+PHP 5 introduit les concepts de classes et de méthodes abstraites. Les classes définies comme abstraites ne peuvent pas être instanciées, et toute classe contenant au moins une méthode abstraite doit elle-aussi être abstraite.
+
+Et force les filles a définir leur methode
+abstract class AbstractClass 
+{
+    // Force les classes filles à définir cette méthode
+    abstract protected function getValue();
+    abstract protected function prefixValue($prefix);
+
+    // méthode commune
+    public function printOut() {
+        print $this->getValue() . "\n";
+   }
+}
+
+Oblige toutes les class filles a définir les functions :
+    function getValue();
+    function prefixValue($prefix);
+
+On instancie les class filles qui hériteront aussi des méthodes non abtstraites de la class abtstraite comme si elle avait été définie dans la class fille
+C'est une manière de définir "un modèle général de méthodes" à utiliser par les enfants
+
+
+Quelles sont les éléments communs à chaque forme -> forme.class.php
+	On va le définir comme abstract (c'est à dire comme un patron pour chaque forme)
+	. Couleur, la position, l'opacité
+	. On fait un construct avec des valeurs par défaut, pour éviter d'avoir rien
+	position peut être un nouvel objet point.class.php qui défini x, y et les fonctions move et moveTo
+	. fonction abstract qui dessine, qui sera propre à chaque forme
+
+Chaque forme va avoir sa class rectangle.class.php, ellipse.class.php.....
+qui va être unz fille de points
+
+
+Exercice Abstract
+-------------------
+
+abstract protected function getValue();	
+abstract protected function affiche();
+
+	public function __construct($produit, $poids, $prix, $qte){
+		$this->produit = $produit;
+		$this->poids = $poids;
+		$this->prix = $prix;
+		$this->qte = $qte;
+	}
+
+
+Class Fromage
+-------------
+
+protected $type;
+
+const LAIT_CRU = "cru";
+const LAIT_CUIT = "cuit";
+
+	function getValue(){
+		return $this->qte.' '.$this->produit.'(s) cout(ent) : '.$this->qte*$this->poids;
+	}
+
+	function affiche(){
+		return $this->produit.' est un fromage à pate : '.self::LAIT_CRU;
+	}
+
+
+Class Boissons
+--------------
+
+Class Boissons extends Produits{
+	protected $type;
+	protected $vendeur;
+
+	const BOISSON_GAZEUSE = "gazeuse";
+	const BOISSON_PLATE = "plate";
+
+
+	public function __construct(){
+		PARENT::__construct($produit, $poids, $prix, $qte);
+		$this->type = $type;
+
+
+	}
+
+	function getValue(){
+		return $this->qte.' '.$this->produit.'(s) cout(ent) : '.$this->qte*$this->poids*1.2;
+	}
+	function affiche(){
+		return $this->produit.' est une boisson : '.$this->type;
+	}
+
+	function vendeur(){
+		return $this->vendeur->affiche();
+	}
+
+
+
+Class vendeur
+-------------
+
+Class Vendeurs{
+	protected $vendeur;
+	protected $adresse;
+	protected $cp;
+	protected $pays;
+
+	function __construct(){
+		$this->vendeur = 'Nestlé';
+		$this->adresse = 'Rue de la vache';
+		$this->cp = '99900';
+		$this->pays = 'Suisse';
+	}
+
+	function affiche(){
+		return $this->vendeur.' est au '.$this->adresse.', '.$this->cp.' '.$this->pays;
+	}
+
+}
+
+
+----------------------------------------------------
+Exercice corrigé avec Produits, Fromages et Boissons
+----------------------------------------------------
+Script index.php
+****************
+<?php
+include 'abstract/abstract.class.php';
+
+$fromages = new Fromages('Munster', 1, 17, 72);
+$boissons = new Boissons('Coca', 6, 2, 12, Boissons::BOISSON_GAZEUSE);
+$dessin = new Dessine();
+
+
+include 'index.phtml';
+?>
+
+
+
+
+
+
+Script index.phtml
+******************
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>PHP</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans">
+    <link rel="stylesheet" href="css/painter.css">
+</head>
+<body>
+    <h1>3WA Painter</h1>
+    Test class
+
+    <p><?= $fromages->getValue(); ?></p>
+    <p><?= $fromages->affiche(); ?></p>
+    <p><?= $fromages->dessine($dessin); ?></p>
+    <p>----------------------------</p>
+    <p><?= $boissons->getValue(); ?></p>
+    <p><?= $boissons->affiche(); ?></p>
+    <p><?= $boissons->vendeur(); ?></p>
+    <p><?= $boissons->dessine($dessin); ?></p>
+
+</body>
+</html>
+
+
+
+
+
+
+Script abstract.class.php
+*************************
+<?php
+abstract class Produits {
+
+	protected $produit;
+	protected $poids;
+	protected $prix;
+	protected $qte;
+
+	abstract protected function getValue();	
+	abstract protected function affiche();
+	abstract protected function dessine(Dessine $dessin);
+
+
+    // methode commune
+    // enregistre le produit
+
+	public function __construct($produit, $poids, $prix, $qte){
+		$this->produit = $produit;
+		$this->poids = $poids;
+		$this->prix = $prix;
+		$this->qte = $qte;
+	}
+
+    public function get_produit(){
+    	return $this->produit;
+    }
+    public function get_poids(){
+    	return $this->poids;
+    }
+	// ....
+
+
+}
+
+Class Fromages extends Produits{
+	protected $type;
+
+	const LAIT_CRU = "cru";
+	const LAIT_CUIT = "cuit";
+	const PRODUIT = 'Fromage';
+
+	function getValue(){
+		return $this->qte.' '.$this->produit.'(s) cout(ent) : '.$this->qte*$this->poids;
+	}
+
+	function affiche(){
+		return $this->produit.' est un fromage à pate : '.self::LAIT_CRU;
+	}
+	function dessine(Dessine $dessin){
+		// on constitue le nom de la methode
+		$methode = 'dessine'.self::PRODUIT;
+		return $dessin->$methode($this->produit);
+	}
+
+
+}
+Class Boissons extends Produits{
+	protected $type;
+	protected $vendeur;
+
+	const BOISSON_GAZEUSE = "gazeuse";
+	const BOISSON_PLATE = "plate";
+	const PRODUIT = 'Boisson';
+
+	public function __construct($produit, $poids, $prix, $qte, $type){
+		PARENT::__construct($produit, $poids, $prix, $qte);
+		$this->type = $type;
+		$this->vendeur = new Vendeurs();
+	}
+
+	function getValue(){
+		return $this->qte.' '.$this->produit.'(s) cout(ent) : '.$this->qte*$this->poids*1.2;
+	}
+	function affiche(){
+		return $this->produit.' est une boisson : '.$this->type;
+	}
+	function vendeur(){
+		return $this->vendeur->affiche();
+	}
+	function dessine(Dessine $dessin){
+		// on constitue le nom de la methode
+		$methode = 'dessine'.self::PRODUIT;
+		return $dessin->$methode($this->produit);
+	}
+
+}
+
+Class Vendeurs{
+	protected $vendeur;
+	protected $adresse;
+	protected $cp;
+	protected $pays;
+
+	function __construct(){
+		$this->vendeur = 'Nestlé';
+		$this->adresse = 'Rue de la vache';
+		$this->cp = '99900';
+		$this->pays = 'Suisse';
+	}
+
+	function affiche(){
+		return $this->vendeur.' est au '.$this->adresse.', '.$this->cp.' '.$this->pays;
+	}
+
+}
+
+Class Dessine{
+	function dessineFromage($nom){
+		return 'Je dessine un Fromage - <b>'.$nom.'</b> qui pû';
+	}
+	function dessineBoisson($nom){
+		return 'Je dessine une Boisson - <b>'.$nom.'</b>';
+	}
+
+}
+?>

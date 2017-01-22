@@ -1,0 +1,38 @@
+Exercice restaurant
+*******************
+*******************
+
+Enoncé restaurant
+*****************
+*****************
+A/ Réaliser une application de commande de plats et de réservations pour un restaurant qui
+	-> affiche l ensembe de la carte du restaurant
+	-> permet de créer un compte client
+	-> après log, le client voit un "bonjour prénom nom s'afficher avant Déconnexion"
+	-> page de réservation d'une table avec confirmation de réservation
+	-> page de commande de plats avec menu déroulant et bouton ajouter, en choisissant la quantité
+		/ en cliquuant sur ajouter le plat apparait en dessous dans "récapitulatif de commande"
+			en regard du prix un "corbeille" permet de supprimer l'article.
+		/ en cliquant sur annuler on revient à la page d'accueil (liste des plats), mais le récapitulatif, garde sa commnde en cours
+		/ En cliquant sur "valider la commande" on arrive sur la page Récap de commande
+	-> Récapitulatif de commande avec liste des produits et payer ou annuler
+		/ annuler fait revenir sur la page d'accueil sans vider le caddie
+		/ payer envoi sur la page validation de commande.
+
+
+B/ Coder la partie Admin qui permet 
+	-> de suivre l'état des commandes (en cours et livrés) liste de commandes
+		/ en editant une commande on a le détail de la commande avec un bouton "livré" qui change l'état de la commande à "En cours" à "livrée"
+	-> d'ajouter des plats au menu
+
+Nom base -> restau
+// tables à créer
+User
+
+Meal
+
+Order
+
+Booking
+
+Orderline

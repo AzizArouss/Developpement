@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Death Note</title>
+    <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css">
+    <!--<link rel="stylesheet" type="text/css" href="index2.css">-->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="index2.js"></script>
+</head>
+    <body>
+        <header>
+            <h1><i class="fa fa-fire" aria-hidden="true"></i> Death Note</h1>
+        </header>
+        <main>
+<!-- LISTE DES CONTACTS -->
+            <section id="contactsList">
+                <ul>
+                    <li><a href="#" class="showContact" data-id="0"></a></li>
+                </ul>
+            </section>
+<!-- FICHE D'UN CONTACT -->
+            <section id="contactDetails" class="hide">
+                <p id="contactFullName"></p>
+                <p id="contactTel"></td>
+                <p><a href="#" class="editContact" id="editContact" data-id="0">Éditer ce contact</a></p>
+            </section>
+<!-- BARRE DE BOUTON (uniquement 'ajouter') -->
+            <section id="menuButton">
+                <a href="#" id="addContact" class="bouton addContact"><i class="fa fa-plus" aria-hidden="true"></i></a>
+            </section>
+<!-- FORMULAIRE DÉBUT -->
+            <section id="contactForm" class="hide">
+                <hr>
+                <form>
+                    <table>
+                        <tr>
+                            <td>
+                                <label for="contactCiv">Civilité :</label>
+                            </td>
+                            <td>
+                                <select name="contactCiv" id="contactCiv">
+                                    <option value="mr">Monsieur</option>
+                                    <option value="ma">Madame</option>
+                                    <option value="ml">Mademoiselle</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="contactFirstName">Prénom :</label>
+                            </td>
+                            <td>
+                                <input type="text" name="contactFirstName" id="contactFirstName" placeholder="Prénom">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="contactLastName">Nom :</label>
+                            </td>
+                            <td>
+                                <input type="text" name="contactLastName" id="contactLastName" placeholder="Nom">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="contactTel">Téléphone :</label>
+                            </td>
+                            <td>
+                                <input type="tel" name="contactTel" id="contactTelInput" placeholder="Téléphone">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                            </td>
+                            <td>
+                                <input type="button" name="saveContact" id="saveContact" data-id="new" value="Enregistrer">
+                                <a href="#" id="delContact" class="bouton"><i class='fa fa-trash-o' aria-hidden='true'></i></a>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </section>
+<!-- FORMULAIRE FIN -->
+        </main>
+    </body>
+</html>

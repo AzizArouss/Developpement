@@ -1,0 +1,83 @@
+<?php 
+echo '</pre>';
+
+/*= $page.'<br>';*/ 
+    // on variabilise les infos de user en session
+    if (!empty($_SESSION['user'])){
+        if (!empty($_SESSION['user']['erreur']))
+            indice_en_variable($_SESSION['user']['erreur'], 'err');
+        if (!empty($_SESSION['user']['form']))
+            indice_en_variable($_SESSION['user']['form'], 'for');
+        // if (!empty($_SESSION['user']['session']))
+        //     indice_en_variable($_SESSION['user']['session']);
+
+    }else{
+        $idusers = false;
+    }
+?>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Encore un Blog ?! #nonMaisAllo</title>
+
+    <!-- Feuilles de style externes -->
+    <link rel="stylesheet" href="vue/css/reset.css">
+    <link rel="stylesheet" href="vue/css/normalize-3.0.3.min.css">
+    <link rel="stylesheet" href="vue/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans">
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Feuilles de style de l'application -->
+    <link rel="stylesheet" href="vue/css/blog-main.css">
+    <link rel="stylesheet" href="vue/css/blog-theme.css">
+    <link rel="stylesheet" href="vue/css/ui-button.css">
+    <link rel="stylesheet" href="vue/css/ui-form.css">
+    <link rel="stylesheet" href="vue/css/styles.css">
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <!-- En-tête commune de l'application -->
+    <header class="blog-header">
+        <h1><a href="?page=index"><i class="fa fa-microphone"></i> Encore un Blog ?! #nonMaisAllo</a></h1>
+        <nav>
+        <?php if ($page == 'connexion'){ ?>
+            <a href="?page=new_account"><i class="fa fa-user-plus"></i>Nouveau compte</a>
+        <?php } ?>
+        <?php if ($page == 'new_account'){ ?>
+            <a href="?page=connection"><i class="fa fa-plug"></i>Connexion</a>
+        <?php } ?>
+        <?php if ($page == 'schow_account'){ ?>
+            <a href="?page=new_account"><i class="fa fa-user-plus"></i>Nouveau compte</a>
+            <a href="?page=deconnect"><i class="fa  fa-sign-out"></i>Déconnexion</a>
+        <?php } ?>
+        <?php if ($idusers != false){ ?>
+            <a href="?page=schow_account"><i class="fa fa-cogs"></i> Bonjour <?= $pseudo; ?></a>
+        <?php } ?>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Chargement du template PHTML spécifié par le programme PHP -->
+        <?php include $page.'.phtml' ?>
+    </main>
+
+    <!-- Pied de page commun de l'application -->
+    <footer class="blog-footer">
+        <small>Le blog des élèves de la 3W Academy</small>
+    </footer>
+</body>
+</html>
+<?php /*= $page.'<br>';*/ 
+    // on efface les infos de session non nécessaire
+    if (!empty($_SESSION['user']['erreur']))
+        session_unset('user-erreur');
+    // if (!empty($_SESSION['user']['form']))
+    //     session_unset($_SESSION['user']['form']);
+
+?>

@@ -1,0 +1,164 @@
+Cours Restau
+
+Les bonnes pratiques sont les "DESIGN PATTERN"
+Un ded ceux ci est le MVC
+Modèle, Vue, Controller
+
+On va séparer la logique du code en trois partie
+
+MODELE, 
+	Gère les données, récupère dans la base de donnée, les organiser pour que ensuite le controller puisse les traiter
+	Si on ne ait aps de requete SQL, on fera sans doute des oouverture et fermeture de fichiers, qui contiendront les données en question
+
+VUE,
+	C'est la partie purement HTML, on y fait e ll'affichage de données et aussi des boucles pour afficher des listes.
+
+CONTROLLEUR
+	C'est lui qui gère la logique et prend les décisions, entre autre c'est lui qui gère les droits d'accès.
+
+Ainsi 
+Controlleur <- -> Modèle
+	¡
+	vue
+
+le controlleur fait des aller-retour entre lui et les modèles, puis une fois ok affiche l'information dans une vue
+
+
+
+define("BLOG", 1);
+defined("BLOG");
+
+Création de la class Connect
+****************************
+****************************
+
+
+Création espace membre
+**********************
+**********************
+
+Page inscription, connexion, déconnexion
++ page à accès réservées
+
+Création de la table
+--------------------
+champs id, psseudo, pass, email, daate_inscription
+éventuellement une table groupe avec ajout d'un champ id_groupe
+
+Hashage du mot de passe (sha1 mini)
+
+Page inscription
+----------------
+Vérification des informations de l'utilisateur
+Pseudo et email juste 1 fois
+2 mots de passe identiques
+vérifier si l'adresse e-mail est bien un email (regex)
+
+Si condition true --> inscription dans la base
+
+
+Page connexion
+--------------
+pseudo, mot de passe, connexion automatique (mot de passe et pseudo oubliés)
+
+si les conditions sont ok, alors on accède à la page membre
+on crée une variable session['membre']['pseudo'] et ['droit']
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Save the project root directory as a global constant.
+define('ROOT_PATH', __DIR__);
+
+/*
+ * Create a global constant used to get the filesystem path to the
+ * application configuration directory.
+ */
+define('CFG_PATH', realpath(ROOT_PATH.'/application/config'));
+
+/*
+ * Create a global constant used to get the filesystem path to the
+ * application public web root directory.
+ *
+ * Can be used to handle file uploads for example.
+ */
+define('WWW_PATH', realpath(ROOT_PATH.'/application/www'));
+
+
+
+/* fonctions a voir */
+/* **************** */
+
+variables globales
+------------------
+$_SERVER,
+$_SESSION
+
+chemin de fichiers et fichiers
+------------------------------
+realpath,
+__DIR__,
+file_exists
+
+variables sessions
+------------------
+session_start,
+session_status
+
+Gestion des imports
+-------------------
+spl_autoload_register,
+
+
+Gestion des erreurs
+-------------------
+error_reporting,
+set_error_handler,
+throw new -> envoi une un method_existsge d'erreur
+	throw new Exception('Erreur à afficher');
+
+try // Nous allons essayer d'effectuer les instructions situées dans ce bloc.
+{
+	// du code
+}catch (Exception $e) // Nous allons attraper les exceptions "Exception" s'il y en a une qui est levée.
+	echo 'Une exception a été lancée. Message d\'erreur : ', $e->getMessage();
+}
+
+
+
+string
+------
+ctype_alnum
+
+
+tableaux
+--------
+array_pop,
+array_shift,
+extract,
+unset
+
+sur les class
+-------------
+interface,
+instanceof,
+method_exists
+

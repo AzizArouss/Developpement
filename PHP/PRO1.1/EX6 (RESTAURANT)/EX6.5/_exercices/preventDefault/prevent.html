@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>event.preventDefault demo</title>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+ 
+<a data-vers="jquery" href="http://jquery.com">default click action is prevented</a>
+<a data-vers="php" href="http://www.php.net/">default click action is not prevented</a>
+<div id="log"></div>
+ 
+<script>
+$( "a" ).click(function( event ) {
+	dataVers = $(this).data('vers');
+	console.log(dataVers);
+
+	if ($(this).data('vers') == 'jquery'){
+	  $( "<div>" )
+	    .append( "default " + event.type + " prevented" )
+	    .appendTo( "#log" );
+	  event.preventDefault();
+	}
+});
+</script>
+ 
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Exemple jQuery</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans">
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- Librairie jQuery -->
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+    <!-- Fonctions du projet -->
+    <script src="js/storage.js"></script>
+    <script src="js/events.js"></script>
+</head>
+<body>
+    <header>
+        <h1><i class="fa fa-flask"></i> Exercice jQuery</h1>
+    </header>
+    <section id="une_liste">
+        <fieldset>
+            <legend> Click sur liste </legend>
+            <ul>
+                <li data-bd="0"><a href="#">Lien 1</a></li>
+                <li data-bd="1"><a href="#">Lien 2</a></li>
+                <li data-bd="2"><a href="#">Lien 3</a></li>
+            </ul>
+            <div id="val_lien"></div>
+            <div id="val_lien_2"></div>
+        </fieldset>
+    </section>
+    <script src="js/main.js"></script>
+</body>
+

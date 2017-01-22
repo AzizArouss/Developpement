@@ -1,0 +1,71 @@
+Framework:
+
+Pour créer une page il faut au minimum:
+UN CONTROLLER
+- Créer un dossier "Page" dans le dossier "controllers". (Page est le nom de la page, par exemple "Login")
+- Dans ce dossier créer un controller avec un nom au format: "PageControlleur.class.php". 
+- Comme son nom l'indique ce controleur est une classe. Elle se charge de gérer le traitement d'input et la préparation des données avant l'affichage de la page;
+- Pour pouvoir rediriger vers la vue, le controller doit pouvoir intercepter la requete vers la page en "GET" ou en "POST"
+- Cette classe (le controller) doit disposer au moins d'une methode "httpGetMethod" pour pouvoir afficher une vue. 
+- Dans cette methode on peut passer des données à notre vue.
+- Pour passer les données à la vue il faut faire un "return" d'un tableau de clefs/valeurs. Les clefs seront convertis en nom de variable dans la vue et auront pour valeurs celles du tableaux.
+
+UNE VUE
+- Créer un dossier "Page" dans le dossier "www"
+- Créer dans ce dossier une vue au format: "PageView.phtml"
+
+
+Pour créer un model il faut:
+- créer un fichier "NomModel.class.php" dans le dossier models
+
+Pour créer une classe (accessible dans tout les controllers) il faut:
+- ajouter un fichier "Nom.class.php" dans le dossier /classes
+- pour autoloader une class il faut passer par un filtre et le definir dans le fichier /config/library.php
+
+Classes et methode à connaitres:
+DATABASE CLASS (/library/Database.class.php)
+ - Créer une instance de cette classe permet d'établir une connexion avec la base de donnée.
+ - Les informations pour se connecter sont récupérées dans le fichier /config/database.php
+ - Contient des méthodes pour insérer et lire des informations dans la base de données 
+	
+ FORM CLASS (/library/Form.class.php)
+ - Classe abstraite contenant des methodes liées au formulaire (ajout de champs, message d'erreur, etc)
+ 
+ Cours:
+ - Interface et polymorphisme
+ - Session PHP
+ - Try et Catch
+ 
+ 
+ Objectif:
+ - Créer une nouvelle page pour l'inscription
+ - Cette page affiche un formulaire d'inscription (voir wireframes)
+ - Avant d'envoyer le formulaire à la page php, il faudra le controller via javascript et empecher son execution si les champs ne sont pas remplis correctement.
+ - Si les champs sont remplis correctement, on inscrit l'utilisateur et on le renvoi sur la page d'accueil ave un statut connecté.
+ - Sur le listing des plats un bouton commander apparait lorsque l'on est connecté.
+ 
+ //FormValidator.class.js
+ Cette classe a des methodes pour vérifier si un champs:
+ - est un nombre
+ - est un nombre positif
+ - a une taille minimum
+ - doit etre rempli
+ 
+
+ methodes à connaitre
+ ********************
+ $http->redirectTo('/'); // renvoi vers une autre page (header version framwork)
+ dans les controller des pages
+ httpGetMethod() ou httpPostMethod() selon la methode employée (GET par défaut)
+
+Execute the front controller
+----------------------------
+$frontController->run(); // -> execute la mathode GET ou POST du controller selon ce qui est demandé et met le GET ou le POST dans $fields
+$frontController->renderView();
+extract()-> fonction php qui permet de variabiliser les index d'un tableau en leur attribuant la valeur de leur index
+
+
+Hashage mot de passe
+http://devdocs.io/php/function.crypt
+
+

@@ -1,0 +1,69 @@
+/* Cours_web_storage
+   *****************
+   ***************** */
+
+Le développement d'applications web et en particulier pour les smartphones fait apparaitre un pb de persistance des données.
+
+En effet il peut être intéressant de garder en mémoire l'état d'un programme Javascript pour pouvoir le restaurer plus tard. 
+OU tout simplement de pouvoir stocker des informations dans la situation d'une connexion internet inexistante.
+Ou alors stocker des informations volumineuses poour y accéder ensuite en mode client
+
+Les solutions en javascript n'existent pas puisque :
+	- Impossible d'acccéder aux fichiers et dossiers de l'utilisateur en Javascript deppuis le navigateur
+	- Cookies ne permet de stocker des données de grandes tailles
+
+Accès aux données depuis Javascript
+	- Deux pages ont la même origine si elles ont les même protocole, hôte et port. 
+	
+	Si on considère : http://www.3wa.com/dir/page.html
+		protocole : http
+		hote : www.3wa.com
+		port : le prot par défaut du serveur web
+
+		Ok
+		http://www.3wa.com/dir/page2.html 
+		http://www.3wa.com/dir2/other.html 
+		http://user:password@www.3wa.com/dir2/other.html 
+
+		!Ok
+		http://www.3wa2.com/dir/page2.html 		-> www.3wa2.com au lieu de www.3wa.com
+		http://3wa.com/dir/page2.html 			-> 3wa.com au lieuwww.3wa.com
+		http://www.3wa.com:8080/dir/page2.html 	-> port: 8080 au lieu du port par défault
+		https://www.3wa.com/dir/page2.html 		-> https: au lieu de http:
+
+Politique de sécurité
+	un script a pour origine celle de la page qui le charge et non pas l'URL à laquelle il est stocké
+
+Objet Storage
+	Deux objets Storage sont accessibles
+		. localStorage : stockage à durée de vie illimité y compris sur d'autre onglet du même navigateur
+		. sessionStorage : stockage jusqu'à la fin de la session (uniquement sur l'onglet ouvert tant qu'il n'est pas fermé)
+
+
+	L'objet storage s'implémente sous forme d'une table associative key -> value
+
+	.setItem(key, value); Associe dans lespace de stockage la clef key à la value
+	.getItem(key); récupère la valeur associée à la clef key
+	.removeItem(key); supprime la valeur et la clef associée à key
+	.length; renvoie le nombre de clefs stockées en webstorage
+	.key(n); revoie la valeur de la nème clef n
+	.clear();
+
+
+Pour sauvegarder en localStorage (ou sessionStorage):
+
+	localStorage.setItem(key, JSON.stringify(value));
+	sessionStorage.setItem(key, JSON.stringify(value));
+    
+    
+    
+Pour récupérer des valeurs sauvegarder en localStorage (ou sessionStorage) :
+
+	JSON.parse(localStorage.getItem(key));
+	JSON.parse(sessionStorage.getItem(key));
+
+1ere Etape : Récupérer le contenu du localStorage
+2eme Etape : Récupérer newContact
+3eme Etape : Ajouter dans Contacts
+4eme Etape : Afficher sur le page
+5eme Etape : Sauvegarder dans le localStorage

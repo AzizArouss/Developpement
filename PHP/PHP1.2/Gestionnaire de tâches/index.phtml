@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<title>Gestionnaire de tâches</title>
+	<link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+	<h1>Gestionnaire de tâches</h1>
+	<form method="post" action="remove.php">
+		<ul>
+			<?php
+				foreach ($tasks as $index => $val) {
+			?>
+			<li>
+				<input type="checkbox" id="task-<?php echo $index;?>" value="<?php echo $index;?>" name="index[]">
+				<label class="<?php echo $val[3];?>" for="task-<?php echo $index;?>"><?php echo $val[0]; if(date_create($val[2])<$now){echo " <strong>EN RETARD</strong>";}?></label>
+				<p><?php echo $val[1] ?></p>	
+			</li>
+			<?php
+				}
+			?>
+			</li>
+		</ul>
+		<input type="submit" name="supprimer" value="supprimer">
+	</form>
+	<section>
+		<form method="post" action="add.php">	
+			<fieldset>
+				<legend>Informations sur la tâche</legend>
+				<label>Titre : <input type="text" name="titre"></label>
+				<label>Tâche : <textarea name="description"></textarea></label>
+				<label>Date de fin : <select name="day">
+					<?php for($i=1 ; $i <= 31 ; $i++) { ?>
+					<option value="<?=$i;?>"><?=$i;?></option>
+					<?php } ?>
+				</select> 
+				<p> / </p>
+				<select name="mois">
+					<option value="Janvier">Janvier</option>
+					<option value="Février">Février</option>
+					<option value="Mars">Mars</option>
+					<option value="Avril">Avril</option>
+					<option value="Mai">Mai</option>
+					<option value="Juin">Juin</option>
+					<option value="Juillet">Juillet</option>
+					<option value="Aout">Aout</option>
+					<option value="Septembre">Septembre</option>
+					<option value="Octobre">Octobre</option>
+					<option value="Novembre">Novembre</option>
+					<option value="Décembre">Décembre</option>
+				</select>
+				<p> / </p>
+				<select name="year">
+				    <?php for($i=date('Y');$i<=date('Y')+4;$i++) { ?>
+				    <option value="<?=$i?>"><?=$i?></option>
+				    <?php } ?>
+				</select></label>
+				<input type="radio" name="priorite" value="basse" title="Priorité basse" id="basse"><label for="basse">Basse</label>
+				<input type="radio" name="priorite" value="normale" title="Priorité normale" id="normale"><label for="normale">Normale</label>
+				<input type="radio" name="priorite" value="haute" title="Priorité haute" id="haute"><label for="haute">Haute</label>
+				<input type="submit" name="ajouter" value="ajouter">
+			</fieldset>
+		</form>
+	</section>
+</body>
+</html>

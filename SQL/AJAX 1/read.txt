@@ -1,0 +1,40 @@
+Ajuax version pure javascript
+
+L'OBJET XMLHttpRequest
+
+var xhr =new XMLHttpRequest();
+xhr.open("GET", "handlingData.php", true);
+xhr.send(null);
+
+Verdsion GET
+var xhr =new XMLHttpRequest();
+xhr.open("GET", "script_de_reception.php?nom_var1=Valeur1&nom_var2=Valeur2", true);
+xhr.send(null);
+
+
+// Si on reprend notre exemple en version POST
+// variable envoyée dans la méthode send()
+var xhr =new XMLHttpRequest();
+xhr.open("POST", "script_de_reception.php", true);
+xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+xhr.send(nom_var1=Valeur1&nom_var2=Valeur2);
+
+<main>
+        <section id="target">
+            <em>Résultats...</em>
+        </section>
+</main>
+
+/* $.GET() */
+// permet d'envoyer une requet au formt GET et de récupérer des information en retour si nécessaire
+jQuery.get( url [, data ] [, success ] [, dataType ] )
+
+// Le seul argument obligatoire est 
+	// url = l'url de réception de notre requete GET 
+	// les autre sont optionnels
+	// data = variabls au format "nom_var1=Valeur1&nom_var2=Valeur2"
+	// success = function CALLBACK encas de succés, va récupérer les données éventuelles envoyées par le script de url
+	// dataType = parmi les 4 types de format qu'on a vu précédamment
+
+// le datatype dans la majorité des cas sera reconnu automatiquement par la "Moulinette jQuery", donc on en le précisera pas.
+

@@ -1,0 +1,21 @@
+<main>
+    <p>Bienvenu(e) <?php echo $prenom ?> !</p>
+    <ul>
+        <?php
+            foreach ($tab as $key => $value)
+            {
+        ?>
+            <li><?php echo $key ?> est de couleur <?php echo $value ?></li>
+        <?php
+            }
+        ?>
+    </ul>
+</main>
+<footer>
+    <ul class="link-list">
+        <li><a class="button button-primary" href="index.php/hello">Hello World</a></li>
+        <li><a class="button button-primary" href="index.php/clients">Clients</a></li>
+        <li><a class="button button-primary" href="index.php/bonjour">Dire Bonjour !</a></li>
+        <li><a class="button button-primary" href="index.php/flickr">Flickr</a></li>
+    </ul>
+</footer>

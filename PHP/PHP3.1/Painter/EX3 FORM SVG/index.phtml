@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>SVGForm</title>
+    <!--<link rel="stylesheet" href="css/normalize.css">-->
+    <!--<link rel="stylesheet" href="css/font-awesome.min.css">-->
+    <!--<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans">-->
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    <link rel="stylesheet" href="formsvg.css">
+ 
+    <!-- Librairie jQuery -->
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="main.js"></script> 
+</head>
+<body>
+    <h1>SVGForm</h1>
+    <svg id="dessin">
+    </svg>
+    <section id="formulaires">
+        <h2>Choisissez votre figure !</h2>
+        <ul id="choix_fomulaire">
+            <!--Formulaire pour le rectangle-->
+            <li class="laforme"><input type="radio" id="rectangle" name="forme" value="rectangle"><label for="rectangle">Rectangle</label></li>
+            <!--Formulaire ppour la carré-->
+            <li><input type="radio" id="carre" name="forme" value="carre"><label for="carre">Carre</label></li>
+            <!--Formulaire pour l'ellipse-->
+            <li><input type="radio" id="ellipse" name="forme" value="ellipse"><label for="ellipse">Ellipse</label></li>
+            <!--Formulaire pour le cercle-->
+            <li><input type="radio" id="cercle" name="forme" value="cercle"><label for="cercle">Cercle</label></li>
+            <!--Formulaire pour le triangle-->
+            <li><input type="radio" id="triangle" name="forme" value="triangle"><label for="triangle">Triangle</label></li>
+        </ul>
+        <div id="fomulaire">
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<?php
+    $mois=['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juilet', 'Aout', 'Septembre', 'Octobre', 'Novembre', 'Décembre'];
+?>
+<p>On est sur la page user</p>
+<?php if (isset($errorMessage) and $errorMessage != null){ ?>
+<aside>
+    <h3>Erreur dans le formulaire</h3>
+    <p><?= $errorMessage;?></p>
+</aside>
+<?php } ?>
+<h3><i class="fa fa-user" aria-hidden="true"></i>
+Création d'un compte client</h3>
+<fieldset>
+<legend>Identité et coordonnées</legend>
+<form method="POST" action="<?= $requestUrl ?>/user">
+    <ul>
+        <li>
+            <label>Prénom</label>
+            <input type="text" id="firstName" name="firstName" class="firstName" value="<?= $firstName; ?>">
+        </li>
+        <li>
+            <label>Nom</label>
+            <input type="text" id="lastName" name="lastName" class="lastName" value="<?= $lastName; ?>">
+        </li>
+        <li>
+            <label>Date de naissance</label>
+            <select>
+                <?php for ($i=1; $i <= 31; $i++): ?>
+                    <option><?= $i; ?></option>
+                <?php endfor ?>
+            </select>
+            <select>
+                <?php foreach ($mois as $key => $value): ?>
+                    <option><?= $value; ?></option>
+                <?php endforeach ?>
+            </select>
+            <select>
+                <?php for ($i=1910; $i <= date('Y'); $i++): ?>
+                    <option><?= $i; ?></option>
+                <?php endfor ?>
+            </select>
+        </li>
+        <li>
+            <label>Adresse</label>
+            <textarea name="adresse"></textarea>
+        </li>
+        <li>
+            <label>Ville</label>
+            <input type="text" id="city" name="city" class="city" value="<?= $city; ?>">
+        </li>
+        <li>
+            <label>Code Postal</label>
+            <input type="text" id="zipCode" name="zipCode" class="zipCode" value="<?= $zipCode; ?>">
+        </li>
+        <li>
+            <label>Téléphone</label>
+            <input type="text" id="phone" name="phone" class="phone" value="<?= $phone; ?>">
+        </li>
+        <li>
+            <label>Mail</label>
+            <input type="text" id="email" name="email" class="email" value="<?= $email; ?>">
+        </li>
+        <li>
+             <input type="submit" name="boutton" value="Envoyer">
+        </li>
+    </ul>
+</form>
+</fieldset>

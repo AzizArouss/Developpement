@@ -1,0 +1,17 @@
+<?php
+
+$pages = isset($_GET['page']) ? pareil : new_form;
+	switch ($_GET['page']) {
+		case 'new_form':
+			$page = 'new_form';
+			break;
+		
+		case 'show_user':
+			$page = 'show_user';
+			break;
+
+		default:
+			$page = 'new_form';
+	}
+
+include 'controller/'.$page.'.control.php';

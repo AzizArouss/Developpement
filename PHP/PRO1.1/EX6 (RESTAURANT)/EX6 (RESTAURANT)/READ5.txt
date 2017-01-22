@@ -1,0 +1,10 @@
+function mailExiste($Email) {
+	$database = new Database();
+	$query = "SELECT * FROM User WHERE Email = ?";
+	$result = $database -> queryOne($query, [$Email]);
+	return $result;
+}
+
+function flashBag
+> donner de l'information positive
+> comment bien enregistrer

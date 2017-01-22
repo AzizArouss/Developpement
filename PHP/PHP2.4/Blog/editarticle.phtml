@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang = "ZXX">
+<head>
+  <meta charset = "utf-8">
+  <link rel = "stylesheet" href = "font-awesome/css/font-awesome.min.css" >
+  <link href = "https://fonts.googleapis.com/css?family=Candal|Open+Sans" rel = "stylesheet"> 
+  <link href = "index.css" rel = "stylesheet" media = "all" type = "text/css">
+  <title>Rédiger un nouveau article 2/5</title>
+</head>
+<body>
+  <header>
+    <h1><i class = "fa fa-microphone" aria-hidden = "true"><a href = "#">Encore un blog ?! #Nonmaisallo</a></i></h1>
+    <div class = "admin">
+    <i class = "fa fa-cogs" aria-hidden = "true"></i><a href = "#">Administration</a>
+    </div>
+  </header>
+  <main>
+    <form method = "post" action = "traitementedit.php">
+      <fieldset>
+            <input type='hidden' name='id_post' value=<?=$id_post;?>>
+            <legend>Nouvel Article</legend>
+            <!--Titre-->
+            <label>Titre</label><input value="<?=$adrequete["Title"];?>" class="tit" type="text" name="Titre">
+              
+            <!--Article-->
+            <label>Article</label><textarea  class="art" name="Article"><?=$adrequete["Contents"];?></textarea>
+              
+            <!--Auteur-->
+            <select name="Auteur" size="1">
+                <option value=<?=$adrequete["Id"];?>>
+                  <?=$adrequete["FirstName"];?><?=$adrequete["LastName"];?> 
+                </option>
+            </select>
+            <!--Catégories-->
+            <select name="Categorie" size="1">
+                <option value=<?=$adrequete["Id"];?>>
+                  <?=$adrequete["Name"];?>
+                </option>
+            </select>
+            <!--Boutton-->
+            <div class="boutton">
+              <button>Enregistrer</button>
+              <button>Annuler</button>
+            </div>
+   </fieldset>
+    </form>
+  </main>
+  <footer>
+    <p>Le blog des élèves de la 3W Academy</p>
+  </footer>
+</body>
+</html>

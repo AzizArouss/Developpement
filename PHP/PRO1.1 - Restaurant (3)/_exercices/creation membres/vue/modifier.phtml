@@ -1,0 +1,37 @@
+<form method="post" action="index.php?page=modifier" enctype="multipart/form-data">
+	<ul>
+		<input type="hidden" name="idusers" value="<?= $for_idusers; ?>">
+		<li class="form-group">
+			<img id="portrait" src="vue/files/<?= $idusers; ?>/<?= $for_file; ?>">
+			<input type="file" name="portrait">
+		</li>
+
+		<li class="form-group">
+			<label for="pseudo">Pseudo</label>
+			<input type="text" name="pseudo" id="pseudo" class="form-control" value="<?= $for_pseudo; ?>">
+		</li>
+		<li class="form-group">
+			<label for="prenom">Prénom</label>
+			<input type="text" name="prenom" id="prenom" class="form-control" value="<?= $for_prenom; ?>">
+		</li>
+		<li class="form-group">
+			<label for="nom">Nom</label>
+			<input type="text" name="nom" id="nom" class="form-control" value="<?= $for_nom; ?>">
+		</li>
+		<li class="form-group">
+			<label for="mail">Mail</label>
+			<input type="text" name="mail" id="mail" class="form-control" value="<?= $for_mail; ?>">
+		</li>
+		<li class="form-group">
+			<label for="mobile">Mobile</label>
+			<input type="text" name="mobile" id="mobile" class="form-control" value="<?= $for_mobile; ?>">
+		</li>
+		<li class="form-group">
+			<label for="pass[]">Pass</label>
+			<input type="password" name="pass" id="pass[]" class="form-control" value="<?= isset($for_pass) ? $for_pass : ''; ?>">
+		</li>
+		<li>
+			<input type="submit" name="boutton" value="Mettre à jour" class="btn btn-default">
+		</li>
+	</ul>
+</form>

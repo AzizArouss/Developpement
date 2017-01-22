@@ -1,0 +1,27 @@
+Formulaire avec les infos suivantes
+	> Pseudo, 
+	> Prénom, 
+	> Nom, 
+	> Mail, 
+	> Mobile, 
+	> Pass
+
+Avant d'enregistrer les infos faire une vérification des informations entrées :
+	> Adresse mail valide,
+	> les 2 mots passes sont égaux,
+	> Pseudo unique, 
+	> Mail unique, 
+
+Créer une base : 
+	> blogueurs
+
+Créer une table : 
+	> users
+
+Créer les class : 
+	> Autoloader, 
+	> Users, 
+	> Sauve_user, 
+	> Affiche_user
+
+Quand le compte est créé, on affiche une page membre en affichant de nouveau les infos du user avec en plus la date de création du compte

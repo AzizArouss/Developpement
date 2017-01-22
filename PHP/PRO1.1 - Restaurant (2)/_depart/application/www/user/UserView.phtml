@@ -1,0 +1,26 @@
+<p>On est sur la page user</p>
+<?php if (isset($errorMessage) and $errorMessage != null){ ?>
+<aside>
+    <h3>Erreur dans le formulaire</h3>
+    <p><?= $errorMessage;?></p>
+</aside>
+<?php } ?>
+<form method="POST" action="<?= $requestUrl ?>/user">
+    <ul>
+        <li>
+            <label>Prénom</label>
+            <input type="text" id="firstName" name="firstName" class="firstName" value="<?= $firstName; ?>">
+        </li>
+        <li>
+            <label>Nom</label>
+            <input type="text" id="lastName" name="lastName" class="lastName" value="<?= $lastName; ?>">
+        </li>
+        <li>
+            <label>Nom</label>
+            <input type="text" id="email" name="email" class="email" value="<?= $email; ?>">
+        </li>
+        <li>
+             <input type="submit" name="boutton" value="Envoyer">
+        </li>
+    </ul>
+</form>

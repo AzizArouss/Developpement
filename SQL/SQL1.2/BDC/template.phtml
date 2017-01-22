@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Bons de commande</title>
+    <link rel="stylesheet" href="order-form.css">
+</head>
+<body>
+    <section>
+        <h1>Bons de commande</h1>
+        <table class="standard-table">
+            <caption>Liste des commandes</caption>
+            <thead>
+                <tr>
+                    <th>Commande</th>
+                    <th>Date de la commande</th>
+                    <th>Date de livraison</th>
+                    <th>Statut</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php foreach($tab as $index => $ligne){ ?>
+                <tr>
+                    <td><a href="order.php?orderNumber=<?=$tab[$index]["orderNumber"];?>">
+                        <?=$tab[$index]["orderNumber"];?>
+                    </a></td>
+                    <td><?=$tab[$index]["orderDate"]?></td>
+                    <td><?=$tab[$index]["shippedDate"]?></td>
+                    <td><?=$tab[$index]["status"]?></td>
+                </tr>
+                <?php } ?>
+            </tbody>
+        </table>
+    </section>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Carnet d'adresses</title>
+    <!--<link rel="stylesheet" type="text/css" href="reset.css">-->
+    <!--<link rel="stylesheet" type="text/css" href="normalize.css">-->
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <!--<script type="text/javascript" src="utilities.js"></script>-->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
+</head>
+<body>
+    <header class="content">
+        <h1><i class="fa fa-fire" aria-hidden="true"></i> Death Note</h1>
+    </header>
+    <main class="content">
+        <section>
+            <ul id="contactList">
+                <li>Micheline POMPADOUR</li>
+                <li>Kevin ZAHOUAR</li>
+                <li>Elianas ZADANPOPOULOS</li>
+            </ul>
+        </section>
+        <section id="contactDetails">
+            <article class="hidden" id="0">
+                <h2>M. Kevin ZAHOUAR</h2>
+                <p>0123456789</p>
+                <a href="#">Editer ce contact</a>
+            </article>
+        </section>
+        <section id="buttons">
+            <button id="plus"><i class="fa fa-plus" aria-hidden="true"></i></button>
+            <button id="trash"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+        </section>
+        <div class="hidden" id="form">
+            <div>
+                <label for="civilites">Civilité : </label>
+                <select name="civilites">
+                    <option value="M.">Monsieur</option>
+                    <option value="Mme">Madame</option>
+                    <!--<option value="Mlle">Mademoiselle</option>-->
+                </select>
+            </div>
+            <div>
+                <label for="nom">Nom : </label>
+                <input type="text" name="nom" placeholder=" Nom de la victime">   
+            </div>
+            <div>
+                <label for="prenom">Prénom : </label>
+                <input type="text" name="prenom" placeholder=" Prénom de la victime">
+            </div>
+            <div>
+                <label for="tel">Téléphone : </label>
+                <input type="text" name="tel" placeholder=" Tél. de la victime">
+            </div> 
+        </div>
+        <button id="enregistrer">Enregistrer</button>
+        <script type="text/javascript" src="index.js"></script>
+    </main>
+    <img class="image" src="https://tvfiles.alphacoders.com/957/poster-thumb-9571.jpg">
+</body>
+</html>

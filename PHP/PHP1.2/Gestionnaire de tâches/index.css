@@ -1,0 +1,44 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #d3d3d3;
+	margin: 0 auto;
+}
+
+form {
+	width: 80%;
+}
+
+ul {
+	list-style: none;
+}
+
+.priority-high {
+	color: green;
+}
+
+.priority-normal {
+	color: black;
+}
+
+.priority-low {
+	color: red;
+}
+
+#form_list label:hover + p {
+	display: block;
+}
+
+#form_list label + p {
+	display: block;
+}
+
+input[type="checkbox"]:checked + label {
+	text-decoration: line-through;
+}
+
+.radio-bas li {
+	display: inline-block;
+}

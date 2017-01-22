@@ -1,0 +1,40 @@
+Projet Restaurant
+	> Reservation d'une table
+	> Commande de plats en ligne
+	> Creation de compte utilisateur
+	> Creation de compte admin (employes)
+
+Utilisation du dessin Pattern MVC
+Programmation objet
+
+M Model
+V View
+C Controller
+
+M Model
+	> Blog > blog.class.php
+V View
+	> Blog > blog.phtml
+C Controller
+	> Blog > blog.php
+
+Fonction d'appel de class "automatique"
+	spl_autoloader_register('charge_class');
+
+	function charge_class($class){
+		include_once('class/$class.class.php');
+	}
+
+Notre site
+	> Dossier Class
+		> MaClass.class.php
+		> UneAutre.class.php
+
+	$MaClass = new MaClass();
+
+Class MaClass {
+	private $val
+	function __construct(){
+
+	}
+}
